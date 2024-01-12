@@ -1,0 +1,45 @@
+.contact-module {
+  position: fixed;
+  height: 40px;
+  right: 2em;
+  bottom: 2em;
+  border-radius: 14px;
+  max-width: 20em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  background: #4119b5;
+}
+
+.contact-module div {
+  margin: 0 0.2em;
+  height: 40px;
+  background: #4119b5;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.contact-module span {
+  line-height: 40px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #a98bff;
+}
+
+.contact-module span .number {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.contact-module span .number:hover {
+  color: #190f33;
+}
+/*# sourceMappingURL=contactModule.css.map */

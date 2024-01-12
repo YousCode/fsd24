@@ -1,0 +1,217 @@
+@charset "UTF-8";
+/**
+ *  -----------------------------------------------
+ *  FONTS
+ *  -----------------------------------------------
+ */
+/*-----------------------------------------------
+ * Proxima Nova
+ -----------------------------------------------*/
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Regular.eot?#iefix");
+  src: url("../fonts/ProximaNova-Regular.eot?#iefix") format("eot"), url("../fonts/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/ProximaNova-Regular.svg") format("svg"), url("../fonts/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Light.eot?#iefix");
+  src: url("../fonts/ProximaNova-Light.eot?#iefix") format("eot"), url("../fonts/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova-Light.woff2") format("woff2"), url("../fonts/ProximaNova-Light.svg") format("svg"), url("../fonts/ProximaNova-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Bold.eot?#iefix");
+  src: url("../fonts/ProximaNova-Bold.eot?#iefix") format("eot"), url("../fonts/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold.woff2") format("woff2"), url("../fonts/ProximaNova-Bold.svg") format("svg"), url("../fonts/ProximaNova-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+/*-----------------------------------------------
+ * IcoMoon
+ -----------------------------------------------*/
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?cy97re");
+  src: url("../fonts/icomoon.eot?cy97re#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?cy97re") format("truetype"), url("../fonts/icomoon.woff?cy97re") format("woff"), url("../fonts/icomoon.svg?cy97re#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-youtube:before {
+  content: "";
+}
+
+.icon-web:before {
+  content: "";
+}
+
+.icon-vimeo:before {
+  content: "";
+}
+
+.icon-instagram:before {
+  content: "";
+}
+
+.icon-scroll-arrows:before {
+  content: "";
+}
+
+.icon-contract:before {
+  content: "";
+}
+
+.icon-folder:before {
+  content: "";
+}
+
+.icon-logout:before {
+  content: "";
+}
+
+.icon-check:before {
+  content: "";
+}
+
+.icon-phone:before {
+  content: "";
+  color: #7665a7;
+}
+
+.icon-bold-cross:before {
+  content: "";
+}
+
+.icon-alert:before {
+  content: "";
+}
+
+.icon-down-arrow:before {
+  content: "";
+  color: #ffffff;
+}
+
+.icon-language:before {
+  content: "";
+}
+
+.icon-talk:before {
+  content: "";
+}
+
+.icon-download-cloud:before {
+  content: "";
+}
+
+.icon-download:before {
+  content: "";
+}
+
+.icon-long-arrow:before {
+  content: "";
+}
+
+.icon-move:before {
+  content: "";
+}
+
+.icon-notes:before {
+  content: "";
+}
+
+.icon-player:before {
+  content: "";
+}
+
+.icon-cross:before {
+  content: "";
+}
+
+.icon-plus:before {
+  content: "";
+}
+
+.icon-refresh:before {
+  content: "";
+}
+
+.icon-skills:before {
+  content: "";
+}
+
+.icon-job:before {
+  content: "";
+}
+
+.icon-status:before {
+  content: "";
+}
+
+.icon-task:before {
+  content: "";
+}
+
+.icon-order:before {
+  content: "";
+}
+
+.icon-filters:before {
+  content: "";
+}
+
+.icon-categories:before {
+  content: "";
+}
+
+.icon-search:before {
+  content: "";
+}
+
+.icon-project:before {
+  content: "";
+}
+
+.icon-talent:before {
+  content: "";
+}
+
+.icon-calendar:before {
+  content: "";
+}
+
+.icon-delete:before {
+  content: "";
+}
+
+.icon-see:before {
+  content: "";
+}
+
+.icon-edit:before {
+  content: "";
+}
+
+.icon-location:before {
+  content: "�";
+  color: #7665a7;
+}
+
+.icon-time:before {
+  content: "";
+}

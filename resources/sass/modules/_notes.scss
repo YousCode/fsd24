@@ -1,0 +1,194 @@
+/**
+ *  -----------------------------------------------
+ *  components/NOTES
+ *  -----------------------------------------------
+ */
+
+
+/*-----------------------------------------------
+ * Notes
+ -----------------------------------------------*/
+
+.notes {
+    display: none;
+    @include shadow();
+    border-radius: 5px;
+    background: #1e1438;
+    padding: 15px;
+    position: relative;
+    top: -54px;
+    left: 15px;
+    width: 91%;
+    max-width: 100%;
+    text-align: left;
+    z-index: 10;
+    // Arrow
+    /*     &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        @include background-color("dark_bg");
+        @include border(top, 1px, "table_row");
+        @include border(right, 1px, "table_row");
+        z-index: 1;
+    } */
+    .word-wrap {
+        margin-bottom: -25px;
+    }
+    .text {
+        word-wrap: break-word;
+        margin: 0;
+        //overflow-y: scroll;
+        margin-bottom: 10px;
+        &.notes-color {
+            color: #7665a7;
+        }
+    }
+    &__actions {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        button:hover {
+            color: $purple;
+        }
+        .icon {
+            pointer-events: none;
+            @include color("main_text");
+        }
+    }
+    div.notes-wrapper {
+        color: #7665a7;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        display: flex;
+        align-items: inherit;
+        .note-checkbox {
+            margin-right: 5px;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #7665a7;
+            border-radius: 50%;
+            transition: 0.3s;
+            &.checked {
+                background-image: url("../images/ui/checkBox-check.svg");
+                background-color: #48367c;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                transition: 0.3s;
+            }
+        }
+        input[type="checkbox"] {
+            position: absolute;
+        }
+        label.note-checkBox {
+            color: #7665a7;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        input[type="checkbox"]:checked+label.note-checkBox::before {
+            background-image: url("../images/ui/checkBox-check.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: all 0.3s ease-in-out;
+        }
+        label.note-checkBox::before {
+            transition: all 0.3s ease-in-out;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #7665a7;
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            &:hover {
+                box-shadow: 2px #7665a7;
+            }
+        }
+    }
+}
+
+
+/*-----------------------------------------------
+ * Form - Notes field
+ -----------------------------------------------*/
+
+.notes {
+    &__form-box {
+        position: relative;
+        .form-field-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 9px 10px 8px;
+        }
+    }
+    &__input {
+        position: relative;
+        height: 40px;
+        // arrow
+        &::after {
+            content: "";
+            display: block;
+            border-right: 2px solid #888888 !important;
+            border-bottom: 2px solid #888888 !important;
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-55%) rotate(45deg);
+            transition: transform 0.3s ease;
+        }
+        &.has-value {
+            .form-field-placeholder {
+                opacity: 0;
+            }
+        }
+    }
+    &__field-value {
+        display: inline-block;
+        max-width: 93%;
+        max-height: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        &.is-cut::after {
+            content: "...";
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $white;
+        }
+    }
+    &__textarea {
+        resize: none;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 15px;
+        right: 15px;
+        width: calc(100% - 30px);
+        height: 170px;
+        transform: translateY(-5px);
+        background-color: $white;
+        padding: 12px 10px;
+        z-index: 2;
+        .filter-item & {
+            left: 0;
+            right: 0;
+            width: 100%;
+            transform: translateY(5px);
+        }
+    }
+}

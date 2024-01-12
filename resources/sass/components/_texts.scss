@@ -1,0 +1,38 @@
+/**
+ *  -----------------------------------------------
+ *  TEXTS
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Text
+ -----------------------------------------------*/
+.text {
+    @include text-size(32);
+    @include color("main_text");
+    @include media("<phone") {
+        font-size: 0.9em;
+    }
+}
+.text-task {
+    @include text-size(26);
+    @include color("main_text");
+}
+.text-task-position {
+    position: absolute;
+    right: 48px;
+    top: 17px;
+    color: #7665a7 !important;
+}
+
+small,
+.sm-text {
+    @include text-size(24);
+}
+
+/*-----------------------------------------------
+ * Texts Style
+ -----------------------------------------------*/
+.is-upp {
+    text-transform: uppercase;
+}

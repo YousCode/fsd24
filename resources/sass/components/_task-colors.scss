@@ -1,0 +1,140 @@
+/**
+ *  -----------------------------------------------
+ *  components/TASK COLORS
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Task background gradient colors
+ -----------------------------------------------*/
+body {
+    // VFX
+    .task-vfx,
+    .border-vfx::before {
+        @include gradient(#8e8cd0, #c2c0ea, 0deg);
+    }
+    &.theme-dark .task-vfx,
+    &.theme-dark .border-vfx::before {
+        @include gradient(#5a588f, #9391c5, 0deg);
+    }
+
+    // Etalonnage
+    .task-etalonnage,
+    .border-etalonnage::before {
+        @include gradient(#d08c8c, #eac0c0, 0deg);
+    }
+    &.theme-dark .task-etalonnage,
+    &.theme-dark .border-etalonnage::before {
+        @include gradient(#925353, #ce9090, 0deg);
+    }
+
+    // Recherche
+    .task-recherche,
+    .border-recherche::before {
+        @include gradient(#d0b18c, #ead9c0, 0deg);
+    }
+    &.theme-dark .task-recherche,
+    &.theme-dark .border-recherche::before {
+        @include gradient(#b89569, #d1b68e, 0deg);
+    }
+
+    // Sound Design
+    .task-sound-design,
+    .border-sound-design::before {
+        @include gradient(#5e71c0, #97a9e2, 0deg);
+    }
+    &.theme-dark .task-sound-design,
+    &.theme-dark .border-sound-design::before {
+        @include gradient(#4255a7, #7a8dc9, 0deg);
+    }
+
+    //Confo
+
+    .task-confo-post-etalo,
+    .border-confo-post-etalo::before {
+        @include gradient(#5e71c0, #97a9e2, 0deg);
+    }
+    &.theme-dark .task-confo-post-etalo,
+    &.theme-dark .border-confo-post-etalo::before {
+        @include gradient(#4255a7, #7a8dc9, 0deg);
+    }
+    //Livraison
+
+    .task-livraison,
+    .border-livraison::before {
+        @include gradient(#4363e4, #7a89d0, 0deg);
+    }
+    &.theme-dark .task-livraison,
+    &.theme-dark .border-livraison::before {
+        @include gradient(#4363e4, #7a89d0, 0deg);
+    }
+    //Ecole
+
+    .task-ecole,
+    .border-ecole::before {
+        @include gradient(#474c5d, #474c5d, 0deg);
+    }
+    &.theme-dark .task-ecole,
+    &.theme-dark .border-ecole::before {
+        @include gradient(#474c5d, #474c5d, 0deg);
+    }
+    //Absence
+
+    .task-absence,
+    .border-absence::before {
+        @include gradient(#b0b1b5, #b0b1b5, 0deg);
+    }
+    &.theme-dark .task-absence,
+    &.theme-dark .border-absence::before {
+        @include gradient(#b0b1b5, #b0b1b5, 0deg);
+    }
+    //Confo pre etalo
+    .task-confo-pre-etalo,
+    .border-confo-pre-etalo::before {
+        @include gradient(#b0b1b5, #b0b1b5, 0deg);
+    }
+    &.theme-dark .task-confo-pre-etalo,
+    &.theme-dark .border-confo-pre-etalo::before {
+        @include gradient(#b0b1b5, #b0b1b5, 0deg);
+    }
+
+    // Motion
+    .task-motion,
+    .border-motion::before {
+        @include gradient(#8cbcd0, #c0dfea, 0deg);
+    }
+    &.theme-dark .task-motion,
+    &.theme-dark .border-motion::before {
+        @include gradient(#5d9eb9, #8ebac9, 0deg);
+    }
+
+    // Ecriture
+    .task-ecriture,
+    .border-ecriture::before {
+        @include gradient(#b3d08c, #daeac0, 0deg);
+    }
+    &.theme-dark .task-ecriture,
+    &.theme-dark .border-ecriture::before {
+        @include gradient(#90b361, #bed39a, 0deg);
+    }
+
+    // Montage
+    .task-montage,
+    .border-montage::before {
+        @include gradient(#c18cd0, #e2c0ea, 0deg);
+    }
+    &.theme-dark .task-montage,
+    &.theme-dark .border-montage::before {
+        @include gradient(#995eab, #c893d5, 0deg);
+    }
+
+    // Graphisme
+    .task-graphisme,
+    .border-graphisme::before {
+        @include gradient(#8cd0ab, #c0ead5, 0deg);
+    }
+    &.theme-dark .task-graphisme,
+    &.theme-dark .border-graphisme::before {
+        @include gradient(#5daf83, #84d0aa, 0deg);
+    }
+}

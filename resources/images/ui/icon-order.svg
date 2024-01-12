@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Triangle_1_);}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);}
+</style>
+<g>
+	<g transform="translate(-2160.000000, -45.000000)">
+		<g>
+			<g id="SEARCH-BAR-PROJET">
+				<g id="FILTRES" transform="translate(1190.000000, 25.000000)">
+					<g id="Group-7" transform="translate(970.000000, 20.000000)">
+						
+							<linearGradient id="Triangle_1_" gradientUnits="userSpaceOnUse" x1="-105.4328" y1="136.8952" x2="-106.2211" y2="135.5416" gradientTransform="matrix(15.3028 0 0 -12.1728 1638.5248 1664.0552)">
+							<stop  offset="0" style="stop-color:#4F00B5"/>
+							<stop  offset="1" style="stop-color:#7D2A86"/>
+						</linearGradient>
+						<path id="Triangle" class="st0" d="M15.8,1.3l6.7,10.2c0.3,0.5,0.2,1.1-0.3,1.4C22,12.9,21.8,13,21.7,13H8.3c-0.6,0-1-0.4-1-1
+							c0-0.2,0.1-0.4,0.2-0.5l6.7-10.2c0.3-0.5,0.9-0.6,1.4-0.3C15.7,1.1,15.8,1.2,15.8,1.3z"/>
+						
+							<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-105.4328" y1="155.6255" x2="-106.2211" y2="154.2719" gradientTransform="matrix(15.3028 0 0 12.1728 1638.5248 -1862.0552)">
+							<stop  offset="0" style="stop-color:#4F00B5"/>
+							<stop  offset="1" style="stop-color:#7D2A86"/>
+						</linearGradient>
+						<path class="st1" d="M15.8,28.7l6.7-10.2c0.3-0.5,0.2-1.1-0.3-1.4C22,17.1,21.8,17,21.7,17H8.3c-0.6,0-1,0.4-1,1
+							c0,0.2,0.1,0.4,0.2,0.5l6.7,10.2c0.3,0.5,0.9,0.6,1.4,0.3C15.7,28.9,15.8,28.8,15.8,28.7z"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

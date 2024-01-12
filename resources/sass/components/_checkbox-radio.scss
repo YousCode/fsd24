@@ -1,0 +1,170 @@
+/**
+ *  -----------------------------------------------
+ *  components/CHECKBOX - RADIO
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Checkbox
+ -----------------------------------------------*/
+.wrapper-checkbox {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 15px;
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    &.is-full {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+
+    &.is-border {
+        padding: 30px 25px;
+    }
+
+    &:hover  {
+        cursor: pointer;
+    }
+
+    .checkbox,
+    .radio {
+        cursor: pointer;
+        display: inline-block;
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 1.2;
+        position: relative;
+
+        &::before {
+            background-color: transparent;
+            content: "";
+            display: block;
+            width: 11px;
+            height: 11px;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            left: 3px;
+            position: absolute;
+            top: 4px;
+        }
+    }
+
+    // Checkbox
+    .checkbox {
+        &::before {
+            border: 1px solid $grey-b;
+            border-radius: 2px;
+        }
+
+        &::after {
+            border-bottom: 2px solid transparent;
+            border-left: 2px solid transparent;
+            height: 8px;
+            transform: rotate(-45deg);
+            width: 15px;
+        }
+    }
+
+    // Radio
+    .radio {
+        &::before {
+            @include border(all, 1px, "secondary_text");
+            border-radius: 50%;
+        }
+
+        &::after {
+            background-color: transparent;
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    input {
+        left: 0;
+        margin: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        cursor: pointer;
+
+        &:checked + .radio {
+            &::after {
+                @include gradient(#b02bcb, #78139b);
+            }
+        }
+
+        &:checked + .checkbox {
+            &::before {
+                background-color: #7665a7;
+                transition: 0.3s;
+            }
+        }
+
+        &:checked + .radio + label {
+            @include color("main");
+            font-weight: 700;
+
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        &:hover  {
+            cursor: pointer;
+        }
+    }
+
+    .checkbox-label {
+        color: $main-grey;
+        display: inline-block;
+        vertical-align: top;
+        @include text-size(30);
+        font-family: inherit;
+        padding-left: 3px;
+        max-width: 90%;
+
+        &.is-small {
+            font-size: 1.2rem;
+        }
+
+        &.lines {
+            line-height: 2;
+            margin-top: -2px;
+        }
+    }
+
+    &.is-border .checkbox-label::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 2px solid $black;
+        opacity: 0.2;
+    }
+
+    @include media-breakpoint-down(xs) {
+        margin-bottom: 15px;
+
+        &.is-border {
+            padding: 20px 15px;
+        }
+
+        .checkbox-label {
+            max-width: 89%;
+        }
+    }
+}

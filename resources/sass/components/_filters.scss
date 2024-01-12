@@ -1,0 +1,282 @@
+/**
+ *  -----------------------------------------------
+ *  components/FILTERS
+ *  -----------------------------------------------
+ */
+
+.filters {
+    @include background-color("light_bg_2");
+    border-radius: 8px;
+    @include shadow();
+    padding: 0 15px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.filters-row {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*-----------------------------------------------
+ * Col
+ -----------------------------------------------*/
+.filter-col {
+    // flex: 0 0 22%;
+    width: 100%;
+    max-width: 22%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &.is-button {
+        // flex: 0 0 12%;
+        width: auto;
+        max-width: 12%;
+        align-self: flex-end;
+    }
+}
+
+.filters-col {
+    width: 66%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 10px;
+
+    .filter-col {
+        max-width: 50%;
+    }
+
+    /* &::before {
+        content: '';
+        height: 20px;
+        width: 1px;
+        background-color: $grey-b;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-15px, -50%);
+    }*/
+}
+
+.search-col {
+    padding: 5px;
+    width: 33%;
+
+    .filter-picto {
+        left: 15px;
+    }
+}
+
+/*-----------------------------------------------
+ * Filter Text
+ -----------------------------------------------*/
+.filters-text {
+    display: inline-block;
+    align-self: center;
+    @include text-size(30);
+    font-weight: 700;
+    min-width: 100px;
+}
+
+.filters-main-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    font-size: 10px;
+}
+
+/*-----------------------------------------------
+ * Filter Label
+ -----------------------------------------------*/
+.filter-label {
+    display: block;
+    @include text-size(25);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/*-----------------------------------------------
+ * Filters Item
+ -----------------------------------------------*/
+.filter-item {
+    // max-width: 310px;
+    position: relative;
+
+    .select2-container .select2-search--inline .select2-search__field {
+        padding-top: 0;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        right: 35px;
+    }
+
+    .select2-container--default .select2-selection--single {
+        border-color: transparent !important;
+    }
+}
+
+/*-----------------------------------------------
+ * Filter Icon
+ -----------------------------------------------*/
+.filter-picto {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/*-----------------------------------------------
+ * Filter Field
+ -----------------------------------------------*/
+.filter-field,
+.filter-select .select2-container--default .select2-selection,
+.filter-field-date input {
+    @include background-color("light-medium_bg_2");
+    @include color("main_text");
+    border-radius: 8px;
+    border: 0;
+    font-family: inherit;
+    @include text-size(32);
+    @include placeholder();
+    padding: 10px;
+    width: 100%;
+    outline: none;
+}
+
+.has-picto .filter-field,
+.filter-select.has-picto .select2-container--default .select2-selection,
+.has-picto .filter-field-date input {
+    padding-left: 35px;
+    padding-right: 40px;
+}
+.has-picto .filter-field,
+.filter-select.has-picto .select2-container--default .select2-selection ::placeholder {
+    color: #ffffff;
+}
+
+// Search field
+.search-field {
+    background-color: transparent !important;
+    padding: 20px 25px;
+    bottom: 25px;
+
+    // &:focus {
+    //     box-shadow: 0 0 5px -1.5px rgba(94, 94, 94, 0.5), 0px 0px 15px 15px rgba(151, 151, 151, 0.16);
+
+    //     .theme-dark & {
+    //         box-shadow: 0 0 1.2px 0 rgb(177, 182, 189, 0.5), 0px 5px 9px 0 rgb(168, 168, 168, 0.05);
+    //     }
+    // }
+
+    .search-col & {
+        padding-left: 40px !important;
+    }
+    .search-col &::placeholder {
+        color: #ffffff;
+    }
+    .search-col:hover {
+        color: #362866 !important;
+    }
+}
+
+/*-----------------------------------------------
+ * Filters Button
+ -----------------------------------------------*/
+.filters-button {
+    padding: 12px 20px 10px;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        height: 7px;
+        width: 15px;
+        border-left: 1px solid $white;
+        border-bottom: 1px solid $white;
+        transform: rotate(-45deg);
+        position: relative;
+        top: -2px;
+    }
+}
+
+/*-----------------------------------------------
+ * Filters Delete
+ -----------------------------------------------*/
+.filters-delete {
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    transform: translateY(-50%);
+    @include background-color("light_bg_2");
+    border-radius: 6px;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+
+    &.is-cross {
+        &,
+        &:hover {
+            background-color: transparent;
+        }
+
+        &[disabled] {
+            opacity: 0;
+        }
+
+        span {
+            font-weight: 400;
+        }
+    }
+
+    &:hover {
+        background-color: #7665a7;
+        // @include background-color("border_contrast2");
+    }
+
+    span {
+        display: inline-block;
+        line-height: 16px;
+        font-weight: 600;
+    }
+
+    &__picto {
+        @include color("secondary_text");
+
+        display: inline-block;
+        // 	width: 12px;
+        // 	height: 12px;
+        // background-size: 100% auto;
+        // background-position: center;
+        // background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &[disabled] {
+        pointer-events: none;
+        cursor: default;
+        opacity: 0.7;
+
+        .filters-delete__picto {
+            opacity: 0.2;
+            transition: opacity 0.3s ease;
+        }
+    }
+}

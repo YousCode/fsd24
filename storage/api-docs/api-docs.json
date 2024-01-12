@@ -1,0 +1,631 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "",
+        "description": "",
+        "contact": {
+            "email": ""
+        },
+        "version": "1.0.0"
+    },
+    "host": "kolab.local",
+    "basePath": "/api",
+    "schemes": [
+        "https"
+    ],
+    "paths": {
+        "/appointment": {
+            "get": {
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "Get all appointments",
+                "description": "Get all appointments",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/appointment/{id}": {
+            "get": {
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "Get appointment detail",
+                "description": "Get appointment detail",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client": {
+            "get": {
+                "tags": [
+                    "Client"
+                ],
+                "summary": "Get all clients",
+                "description": "Get all clients",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/export": {
+            "get": {
+                "tags": [
+                    "Export"
+                ],
+                "summary": "Get all exports",
+                "description": "Get all exports",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/export/{id}": {
+            "get": {
+                "tags": [
+                    "Export"
+                ],
+                "summary": "Get export detail",
+                "description": "Get export detail",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/format": {
+            "get": {
+                "tags": [
+                    "Format"
+                ],
+                "summary": "Get all formats",
+                "description": "Get all formats",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/job": {
+            "get": {
+                "tags": [
+                    "Job"
+                ],
+                "summary": "Get all jobs",
+                "description": "Get all jobs",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Job"
+                ],
+                "summary": "Add a job",
+                "description": "Add a job",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/job/{id}": {
+            "delete": {
+                "tags": [
+                    "Job"
+                ],
+                "summary": "Delete a job",
+                "description": "Delete a job",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/language": {
+            "get": {
+                "tags": [
+                    "Language"
+                ],
+                "summary": "Get all languages",
+                "description": "Get all languages",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Language"
+                ],
+                "summary": "Add a language",
+                "description": "Add a language",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/language/{id}": {
+            "delete": {
+                "tags": [
+                    "Language"
+                ],
+                "summary": "Delete a language",
+                "description": "Delete a language",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/project-category": {
+            "get": {
+                "tags": [
+                    "ProjectCategory"
+                ],
+                "summary": "Get all project categories",
+                "description": "Get all project Categories",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "ProjectCategory"
+                ],
+                "summary": "Add a project category",
+                "description": "Add a project category",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "color",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/project-category/{id}": {
+            "delete": {
+                "tags": [
+                    "ProjectCategory"
+                ],
+                "summary": "Delete a project category",
+                "description": "Delete a project category",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/project": {
+            "get": {
+                "tags": [
+                    "Project"
+                ],
+                "summary": "Get all projects",
+                "description": "Get all projects",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/project/{id}": {
+            "get": {
+                "tags": [
+                    "Project"
+                ],
+                "summary": "Get project detail",
+                "description": "Get project detail",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/resolution": {
+            "get": {
+                "tags": [
+                    "Resolution"
+                ],
+                "summary": "Get all resolutions",
+                "description": "Get all resolutions",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Resolution"
+                ],
+                "summary": "Add a resolution",
+                "description": "Add a resolution",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/resolution/{id}": {
+            "delete": {
+                "tags": [
+                    "Resolution"
+                ],
+                "summary": "Delete a resolution",
+                "description": "Delete a resolution",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/skill": {
+            "get": {
+                "tags": [
+                    "Skill"
+                ],
+                "summary": "Get all skills",
+                "description": "Get all skills",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Skill"
+                ],
+                "summary": "Add a skill",
+                "description": "Add a skill",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/skill/{id}": {
+            "delete": {
+                "tags": [
+                    "Skill"
+                ],
+                "summary": "Delete a skill",
+                "description": "Delete a skill",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/talent": {
+            "get": {
+                "tags": [
+                    "Talent"
+                ],
+                "summary": "Get all talents",
+                "description": "Get all Talents",
+                "parameters": [
+                    {
+                        "name": "filter_alpha",
+                        "in": "query",
+                        "description": "Filter on the firstname first letter",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "filter_name",
+                        "in": "query",
+                        "description": "search using name and firstname",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "filter_job",
+                        "in": "query",
+                        "description": "Search using job ",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "filter_skills",
+                        "in": "query",
+                        "description": "Filter on Skils using skills id",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "itemsPerPage",
+                        "in": "query",
+                        "description": "Item to show per page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page to show",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/talent/{id}": {
+            "get": {
+                "tags": [
+                    "Talent"
+                ],
+                "summary": "Get all talents",
+                "description": "Get all Talents",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Talent ID",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/task": {
+            "get": {
+                "tags": [
+                    "Task"
+                ],
+                "summary": "Get all tasks",
+                "description": "Get all tasks",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/task/{id}": {
+            "get": {
+                "tags": [
+                    "Task"
+                ],
+                "summary": "Get task detail",
+                "description": "Get task detail",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/task-type": {
+            "get": {
+                "tags": [
+                    "TaskType"
+                ],
+                "summary": "Get all TaskType",
+                "description": "Get all TaskType",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "TaskType"
+                ],
+                "summary": "Add a task type",
+                "description": "Add a task type",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/task-type/{id}": {
+            "delete": {
+                "tags": [
+                    "TaskType"
+                ],
+                "summary": "Delete a task type",
+                "description": "Delete a task type",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}

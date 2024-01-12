@@ -1,0 +1,40 @@
+/**
+ *  -----------------------------------------------
+ *  modules/CONGRATS
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Congrats
+ -----------------------------------------------*/
+.congrats {
+	width: 620px;
+	max-width: 100%;
+	position: relative;
+	z-index: 1;
+
+	&__overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+
+	&__content {
+		width: 350px;
+		max-width: 100%;
+		padding: 30px 20px 40px;
+		margin: 0 auto;
+	}
+
+	&__text {
+		max-width: 230px;
+    margin: 0 auto 30px;
+	}
+
+	.create-more {
+		padding: 30px 40px;
+	}
+}

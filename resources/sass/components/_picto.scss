@@ -1,0 +1,1108 @@
+/**
+ *  -----------------------------------------------
+ *  components/PICTO
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Picto (gradient colored)
+ -----------------------------------------------*/
+
+.picto {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    &.picto-work {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.picto-search {
+    background-image: url("../images/ui/icon-search.svg");
+    .theme-dark & {
+        background-image: url("../images/ui/icon-search.svg");
+    }
+}
+
+.picto-calendar {
+    background-image: url("../images/ui/icon-calendar.svg");
+    .theme-dark & {
+        background-image: url("../images/ui/icon-calendar.svg");
+    }
+}
+
+.picto-file{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+    background-image: url("../images/ui/picto-file.svg");
+}
+
+.picto-job {
+    background-image: url("../images/ui/icon-job.svg");
+    .theme-dark & {
+        background-image: url("../images/ui/icon-job-grey.svg");
+    }
+}
+
+.picto-skills {
+    background-image: url("../images/ui/icon-skills.svg");
+    .theme-dark & {
+        background-image: url("../images/ui/icon-skills-grey.svg");
+    }
+}
+
+.picto-categories {
+    background-image: url("../images/ui/icon-categories.svg");
+    .theme-dark & {
+        background-image: url("../images/ui/icon-categories-grey.svg");
+    }
+}
+
+.picto-order {
+    background-image: url("../images/ui/icon-order.svg");
+    .theme-dark & {
+        background-image: url("../images/ui/icon-order-grey.svg");
+    }
+}
+
+.picto-status {
+    background-image: url("../images/ui/icon-status.svg");
+    .theme-dark & {
+        background-image: url("../images/ui/icon-status-grey.svg");
+    }
+}
+
+.picto-talent {
+    background-image: url("../images/ui/icon-talent.svg");
+    .theme-dark & {
+        background-image: url("../images/ui/icon-talent-grey.svg");
+    }
+}
+
+.picto-task {
+    background-image: url("../images/ui/icon-task.svg");
+    .theme-dark & {
+        background-image: url("../images/ui/icon-task-grey.svg");
+    }
+}
+
+.picto-refresh {
+    background-image: url("../images/ui/icon-refresh.svg");
+}
+
+.picto-talk {
+    background-image: url("../images/ui/icon-talk.svg");
+    .theme-dark & {
+        background-image: url("../images/ui/icon-talk-grey.svg");
+    }
+}
+
+.picto-big-check {
+    background-image: url("../images/ui/icon-big-check.svg");
+    width: 100px;
+    height: 75px;
+}
+
+.picto-projects {
+    background-image: url("../images/ui/icon-projects.svg");
+    .theme-dark & {
+        background-image: url("../images/ui/icon-projects-grey.svg");
+    }
+}
+
+.picto-play {
+    background-image: url("../images/ui/icon-play.svg");
+    .theme-dark & {
+        background-image: url("../images/ui/icon-play-grey.svg");
+    }
+}
+
+.picto-rdv {
+    background-image: url("../images/ui/icon-rdv.svg");
+    .theme-dark & {
+        background-image: url("../images/ui/icon-rdv-grey.svg");
+    }
+}
+
+.picto-rdv-talent {
+    background-image: url("../images/ui/icon-rdv-talent.svg");
+    .theme-dark & {
+        background-image: url("../images/ui/icon-rdv-talent-grey.svg");
+    }
+}
+
+/*-------------------------------------------------------
+    Picto in RDV form
+---------------------------------------------------------*/
+
+.picto-rdv-title {
+    background-image: url("../images/ui/profile.svg");
+}
+
+.picto-rdv-date {
+    background-image: url("../images/ui/calendar.svg");
+}
+
+.picto-rdv-addprofile {
+    background-image: url("../images/ui/add_profile.svg");
+}
+
+.picto-rdv-location {
+    background-image: url("../images/ui/locate.svg");
+    background-size: 1.33rem !important;
+}
+
+.picto-rdv-note {
+    background-image: url("../images/ui/note.svg");
+}
+
+/*-------------------------------------------------------
+    Picto in CARDS
+---------------------------------------------------------*/
+
+.picto-card-location {
+    background-image: url("../images/ui/cards/locate.svg");
+}
+
+.picto-card-tel {
+    background-image: url("../images/ui/cards/phne.svg");
+}
+
+.picto-card-mail {
+    background-image: url("../images/ui/cards/mail.svg");
+}
+
+.picto-work {
+    background-image: url("../images/ui/work.svg");
+}
+
+.picto-clock {
+    background-image: url("../images/ui/clock.svg");
+    width: 11px;
+    height: 11px;
+}
+
+.picto-time {
+    background-image: url("../images/ui/icon-time.svg");
+    width: 11px;
+    height: 12px;
+    margin-left: 2px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    margin-right: 5px;
+}
+
+.picto-location {
+    background-image: url(../images/ui/icon-location.svg);
+    width: 11px;
+    height: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.icon-shape {
+    background-image: url(../images/ui/icon-location.svg);
+    width: 11px;
+    height: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.picto-location2 {
+    background-image: url("../images/ui/icon-location.svg");
+    left: 10px;
+    z-index: 2;
+    width: 11px;
+    height: 16px;
+    margin-left: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 11px;
+}
+
+/*-----------------------------------------------
+ * Explorer Picto
+ -----------------------------------------------*/
+
+.picto-trending-fire {
+    background-image: url("http://kolab-dashboard.test/explorer//images/ui/explorer/icon-trending.svg");
+    width: 18px;
+    height: 26px;
+    margin-right: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+}
+
+.picto-propose {
+    background-image: url("/images/ui/explorer/icon-propose.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-paid {
+    background-image: url("/images/ui/explorer/icon-paid.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-sent {
+    background-image: url("/images/ui/explorer/icon-sent.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-validated {
+    background-image: url("/images/ui/explorer/icon-validated.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-job {
+    background-image: url("/images/ui/explorer/icon-job.svg");
+    height: 20px;
+    width: 18px;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-user {
+    background-image: url("/images/ui/contact.svg");
+    height: 20px;
+    width: 18px;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-lock {
+    background-image: url("/images/ui/explorer/icon-lock.svg");
+    height: 20px;
+    width: 18px;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-infos {
+    background-image: url("/images/ui/explorer/icon-info.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-link {
+    background-image: url("/images/ui/explorer/icon-link.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-shield {
+    background-image: url("/images/ui/explorer/icon-shield.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+.picto-explorer-home-shield{
+    background-image: url('/images/ui/explorer/icon-explorer-shield.svg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-shield-colored {
+    background-image: url("/images/ui/explorer/icon-shield-colored.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-pile {
+    background-image: url("/images/ui/explorer/icon-pile.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-eur {
+    background-image: url("/images/ui/explorer/icon-euro.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-calendar {
+    background-image: url("/images/ui/explorer/icon-calendar.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-notes {
+    background-image: url("/images/ui/explorer/icon-notes.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-dropdown-down {
+    background-image: url("/images/ui/explorer/icon-dropdown-down.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-dropdown-up {
+    background-image: url("/images/ui/explorer/icon-dropdown-up.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-selector-left {
+    background-image: url("/images/ui/explorer/icon-selector-left.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-selector-right {
+    background-image: url("/images/ui/explorer/icon-selector-right.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-selector-left-colored {
+    background-image: url("/images/ui/explorer/icon-selector-left-colored.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-mission-summary-colored {
+    background-image: url("/images/ui/explorer/icon-explorer-mission-summary-colored.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-send-message {
+    background-image: url("/images/ui/explorer/icon-explorer-send-message.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-caret-down {
+    background-image: url("/images/ui/picto-caret-down.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-messenger {
+    background-image: url("/images/ui/icon-messenger.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-exports {
+    background-image: url("/images/ui/icon-exports.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-medias {
+    background-image: url("/images/ui/icon-medias.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-messenger {
+    background-image: url("/images/ui/icon-messenger.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-drive {
+    background-image: url("/images/ui/icon-drive.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-medias-empty {
+    background-image: url("/images/ui/picto-medias-empty.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-exports-empty {
+    background-image: url("/images/ui/picto-exports-empty.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-medias-conv {
+    background-image: url("/images/ui/picto-medias-conv.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-messenger-download {
+    background-image: url("/images/ui/picto-messenger-download.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-messenger-lock {
+    background-image: url("/images/ui/picto-messenger-lock.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-drive-empty {
+    background-image: url("/images/ui/picto-drive-empty.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-duplicate {
+    background-image: url("/images/ui/picto-duplicate.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-delete-project {
+    background-image: url("/images/ui/picto-delete-project.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.picto-delete-export {
+    background-image: url("/images/ui/picto-delete-export.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.picto-delete-export-line {
+    background-image: url("/images/ui/picto-delete-export-line.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.picto-information {
+    background-image: url("/images/ui/picto-information.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-notes {
+    background-image: url("/images/ui/picto-notes.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-days-chevron {
+    background-image: url("/images/ui/picto-days-chevron.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-lock {
+    background-image: url("/images/ui/picto-lock.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-share-project {
+    background-image: url("/images/ui/picto-share-project.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.picto-clock {
+    background-image: url("/images/ui/picto-clock.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.picto-explorer-fire {
+    background-image: url("/images/ui/explorer/icon-explorer-fire.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-pencil-pink {
+    background-image: url("/images/ui/explorer/icon-explorer-pencil-pink.svg");
+    height: 100%;
+    width: 100%;
+    margin-right: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-pencil {
+    background-image: url("/images/ui/explorer/icon-explorer-pencil.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-logout {
+    background-image: url("/images/ui/explorer/icon-explorer-logout.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-project-selector-right {
+    background-image: url("/images/ui/explorer/icon-explorer-project-selector-right.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-project-selector-left {
+    background-image: url("/images/ui/explorer/icon-explorer-project-selector-left.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+.picto-explorer-people-white{
+    background-image: url("/images/ui/icon-explorer_people.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+.picto-explorer-shape-white{
+    background-image: url("/images/ui/icon-explorer_shape.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+.picto-explorer-delete-white{
+    background-image: url("/images/ui/icon-delete-white.svg");
+    height: 2rem;
+    width: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-pile-white {
+    background-image: url("/images/ui/explorer/icon-explorer-pile-white.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-eur-white {
+    background-image: url("/images/ui/explorer/icon-explorer-eur-white.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-mission-detail-white {
+    background-image: url("/images/ui/explorer/icon-explorer-mission-detail-white.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-video {
+    background-image: url("/images/ui/explorer/icon-explorer-video.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-img {
+    background-image: url("/images/ui/explorer/icon-explorer-img.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-client-name {
+    background-image: url("/images/ui/picto-client-name.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-client-email {
+    background-image: url("/images/ui/picto-client-email.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-client-phone {
+    background-image: url("/images/ui/picto-client-phone.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+.picto-envelop {
+    background-image: url("/images/ui/picto-envelop.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-project-deadline {
+    background-image: url("/images/ui/picto-project-deadline.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-project-category {
+    background-image: url("/images/ui/picto-project-category.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-group-color-check {
+    background-image: url("/images/ui/picto-group-color-check.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-group-form-talents {
+    background-image: url("/images/ui/picto-group-form-talents.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-project-production {
+    background-image: url("/images/ui/picto-project-production.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-open-folder {
+    background-image: url("/images/ui/picto-open-folder.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-empty-messenger {
+    background-image: url("/images/ui/picto-empty-messenger.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-heart {
+    background-image: url("/images/ui/picto-heart.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-planning-prev {
+    background-image: url("/images/ui/picto-planning-prev.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-planning-next {
+    background-image: url("/images/ui/picto-planning-next.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-kolab {
+    background-image: url("/images/ui/kolabLogo.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-kolab-client {
+    background-image: url("/images/ui/picto-kolab-client.svg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: contain;
+}
+
+.picto-explorer-search {
+    background-image: url("/images/ui/explorer/icon-search.svg");
+}
+
+.picto-explorer-filter-competence {
+    background-image: url("/images/ui/explorer/icon-explorer-filter-competence.svg");
+}
+
+.picto-explorer-filter-work {
+    background-image: url("/images/ui/explorer/icon-explorer-filter-work.svg");
+}
+
+/*-----------------------------------------------
+ * Icon with Icomoon
+ -----------------------------------------------*/
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    transform: translateY(-5%);
+    //margin: 0 3px 0 3px;
+}

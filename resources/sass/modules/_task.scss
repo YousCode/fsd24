@@ -1,0 +1,160 @@
+/**
+ *  -----------------------------------------------
+ *  components/TASK
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Task
+ -----------------------------------------------*/
+$task-height: 60px;
+
+.task {
+    @include background-color("light-medium_bg");
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    box-shadow: 0 0 1.5px 2px rgba(13, 11, 14, 0.04),
+        0px 0px 1px 0 rgba(10, 31, 68, 0.08);
+    padding: 10px 10px 10px 20px;
+    position: relative;
+    transition: transform 0.5s, margin 0.5s, opacity 0.5s ease;
+    overflow: hidden;
+    min-height: 59px;
+
+    &:not(:first-child) {
+        position: relative;
+        width: 100%;
+        margin-top: -($task-height * 0.99);
+        z-index: -1;
+
+        .is-active & {
+            margin-top: 10px;
+            transform: translateY(0) scaleX(1);
+        }
+    }
+
+    &:nth-child(2) {
+        transform: translateY(8px) scaleX(0.85);
+    }
+    &:nth-child(3) {
+        transform: translateY(16px) scaleX(0.75);
+        opacity: 0.8;
+        z-index: -2;
+    }
+    &:nth-child(n + 4) {
+        transform: translateY(24px) scaleX(0.65);
+        opacity: 0.5;
+        z-index: -3;
+
+        .is-active & {
+            opacity: 1;
+        }
+    }
+    &:nth-child(n + 5) {
+        opacity: 0;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 7px;
+    }
+
+    &.is-task {
+        cursor: pointer;
+    }
+
+    // RDV
+    &.is-appointment::before {
+        @include gradient(#f24343, #e02020, 270deg);
+    }
+
+    &__total-number {
+        @include text-size(40);
+        font-weight: 700;
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        transition: all 0.3s ease;
+
+        .is-active & {
+            max-height: 30px;
+            margin-bottom: 15px;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        transform: translateY(15px);
+        transition: transform 0.5s ease;
+
+        .is-active & {
+            transform: translateY(0);
+        }
+    }
+
+    &__type {
+        color: $black;
+        font-weight: 700;
+    }
+
+    &__name {
+        color: $main-grey;
+    }
+
+    &__number {
+        position: absolute;
+        top: 19px;
+        right: 25px;
+        border-radius: 2.5px;
+        color: $white;
+        @include gradient(#383838, $black, 90deg);
+        @include text-size(22);
+        font-weight: 700;
+        width: 22px;
+        text-align: center;
+        padding: 4px 0px;
+        z-index: 1;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        cursor: pointer;
+        transition: transform 0.5s ease;
+
+        .is-active & {
+            transform: translateY(-15%);
+        }
+    }
+
+    &__number-inner {
+        width: 100%;
+        flex-shrink: 0;
+        transition: transform 0.5s ease;
+        position: relative;
+
+        .is-active & {
+            transform: translateX(-100%);
+        }
+
+        &.is-less {
+            &::before {
+                content: "";
+                display: block;
+                width: 10px;
+                height: 2px;
+                background-color: $white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

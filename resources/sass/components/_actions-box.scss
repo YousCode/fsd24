@@ -1,0 +1,39 @@
+/**
+ *  -----------------------------------------------
+ *  components/ACTIONS BOX
+ *  -----------------------------------------------
+ */
+
+
+/*-----------------------------------------------
+ * Actions Box
+ -----------------------------------------------*/
+
+.actions-box {
+    z-index: 1;
+    position: absolute;
+    border-radius: 5px;
+    // background-color: $grey-whiter;
+    @include background-color("bg_contextMenu");
+    width: 240px;
+    max-width: 100%;
+    @include sm-shadow();
+    display: none;
+    .context-menu--items-element {
+        @include text-size(26);
+        position: relative;
+        &:hover {
+            background-color: $black2;
+        }
+        .fileupload {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 1;
+            cursor: pointer;
+        }
+    }
+}

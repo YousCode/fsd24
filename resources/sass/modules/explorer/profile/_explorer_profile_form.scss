@@ -1,0 +1,208 @@
+.explorer-form-main-label {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+    .icon-container {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #2b1c56;
+        margin: 10px;
+        padding: 14px
+    }
+
+    width: 100%;
+
+    h2 {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: left;
+        color: #fff;
+    }
+}
+.m-t_2
+{
+    margin-top: 2rem;
+}
+.b-b_t{
+    border-bottom: 1px solid #332360
+}
+
+.explorer-form {
+    background-color: rgba(5, 1, 14, 0.3);
+    height: 100vh;
+    padding: 30px 70px 30px 40px;
+    margin: 0;
+
+    .input-container {
+        padding-left: 70px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .explorer-edit-form-button {
+        width: 35px;
+        height: 35px;
+        border-radius: 7px;
+        background-color: #38276a;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -20px;
+        right: -60px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-left: 15px;
+        font-size: 12px;
+        text-align: left;
+        color: #332360;
+    }
+
+    input {
+        width: 100%;
+        margin: 5px 0 1px 0;
+        padding: 11px 14px 12px 14px;
+        border-radius: 5px;
+        border: solid 1px #7665a7;
+
+        background-color: #100824;
+        font-family: "Proxima Nova", "Courier New", Courier, monospace;
+
+        font-size: 14px;
+        text-align: left;
+        color: #ffffff;
+        transition: 0.3s;
+
+        &.error {
+            border: solid 1px red;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        height: 65px;
+        margin: 10px 0 1px 0;
+        padding: 11px 14px 12px 14px;
+        border-radius: 5px;
+        border: solid 1px #7665a7;
+        background-color: #100824;
+        font-family: "Proxima Nova", "Courier New", Courier, monospace;
+        font-size: 14px;
+        text-align: left;
+        color: #ffffff;
+        resize: none;
+    }
+
+    .disabled-input {
+        color: #48367C;
+        border: solid 1px #332360;
+    }
+
+    .disabled-input::placeholder {
+        color: #48368C !important;
+        opacity: 1;
+    }
+
+
+    select {
+        width: 49.5%;
+        margin: 5px 0 1px 0;
+        padding: 11px 14px 12px 14px;
+        border-radius: 5px;
+        border: solid 1px #332360;
+        background-color: #100824;
+        font-size: 14px;
+        text-align: left;
+        color: #ffffff;
+        font-family: "Proxima Nova", "Courier New", Courier, monospace;
+    }
+
+    .password-input {
+        width: 100%;
+    }
+
+
+    .submit-button {
+        width: 400px;
+        height: 35px;
+        flex-grow: 0;
+        border-radius: 5px;
+        background-color: #4119b5;
+        margin: 50px auto 0 auto;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+    }
+
+    .button-sended {
+        background-image: linear-gradient(to right, #795deb -7%, #57dbcb 110%);
+    }
+
+    .select2-container--default .select2-selection--multiple .select2-selection__choice {
+        padding: 5px 10px 4px;
+        border-radius: 5px;
+        background-image: linear-gradient(to top, #2b1c56 80%, #402a81);
+    }
+
+    .select2-container--default .select2-selection--multiple {
+        background-color: #170C33;
+        border: solid 1px #332360;
+    }
+}
+
+
+.theme-explorer .select2-dropdown {
+    border: solid 1px #7665a7;
+    background-color: #100824;
+}
+
+.theme-explorer .select2-results__option.select2-results__option--selected::before {
+    border-radius: 2px;
+    background-color: #936dff;
+}
+
+
+.theme-explorer .select2-container--disabled .select2-selection--single .select2-selection__rendered {
+    color: #48367C;
+}
+
+.theme-explorer .select2-container--disabled .select2-selection--multiple {
+    background-color: #100824;
+    border: solid 1px #7665a7;
+}
+
+.theme-explorer .explorer-form .select2-container--default .select2-selection--multiple {
+    background-color: #100824;
+    border: solid 1px #7665a7;
+    display: flex;
+}
+.select2-container .select2-selection--multiple .select2-selection__rendered{
+    display: flex !important;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.theme-explorer .explorer-form .select2-container--disabled .select2-selection--multiple {
+    background-color: #100824;
+    border: solid 1px #332360;
+}
+
+.e-r_f{
+    width: 49.5%;
+}
+

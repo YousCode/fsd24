@@ -1,0 +1,138 @@
+.explorer-profile-projects-list {
+    .project {
+        height: 290px;
+        width: 100%;
+        position: relative;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+        background-size: cover;
+        background-color: #1b1137;
+        span {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: white;
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+        }
+    }
+
+    .project-empty {
+        height: 290px;
+        width: 100%;
+        position: relative;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+        border-style: dashed;
+        border-width: 1px;
+        border-color: #eb725d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scale(1);
+        transition: 1s;
+
+        span {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: white;
+        }
+
+        &:hover {
+            transition: 1s;
+            transform: scale(1.02);
+        }
+
+    }
+}
+.portfolio-hover{
+
+}
+.p-actions{
+    display: flex;
+    background-color: rgb(60, 27, 174);
+    width: 3rem;
+    justify-content: center;
+    height: 3rem;
+    position: absolute;
+    align-items: center;
+    border-radius: 3.75px;
+    top:1rem;
+    right: 1rem;
+    transform: translate3d(1rem, 0px, 0px);
+    opacity: 0;
+    transition: all .7s ease;
+}
+#portfolio-favicon_delete{
+    height: 2rem;
+    width: 2rem;
+    padding-left: .2rem;
+}
+.picto-explorer-delete-white{
+    position:unset!important;
+}
+#portfolio-favicon_edit{
+
+}
+.p-f_e{
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transform: translate3d(0,0,0);
+    font-size: .7rem;
+    height: 100%;
+    white-space: nowrap;
+    background: #38276A;
+    border-radius: 3.75px;
+    transition: all .9s ease;
+    &:hover{
+        background-color: rgb(60, 27, 174);
+        color: white;
+        opacity: 1;
+        transition: .9s;
+    }
+}
+span.p-f-edit{
+    width: 13rem;
+    height: auto;
+    display: flex;
+    gap: 1rem;
+    position: unset !important;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Proxima Nova'!important;
+    color: #7665A7 !important;
+    transition: .9s;
+    &:hover {
+        color: white !important;
+        transition: .9s;
+    }
+}
+.p-d-hover{
+    opacity: 1 !important;
+    transform: translate3d(0,0,0)!important;
+    transition: all .7s ease;
+}
+.p-e-hover{
+    opacity: 1 !important;
+    transform: translate3d(-4.2rem,0,0)!important;
+    transition: all .9s ease;
+}
+.c-i-f{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.t-i{
+    width: 4rem;
+    height: 4rem;
+    align-self: center;
+}
+.t-i>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}

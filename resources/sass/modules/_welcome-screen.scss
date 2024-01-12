@@ -1,0 +1,40 @@
+/**
+ *  -----------------------------------------------
+ *  modules/WELCOME SCREEN
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Welcome
+ -----------------------------------------------*/
+.welcome-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	@include background-color('dark_bg');
+	z-index: 100;
+	display: none;
+
+	&__inner {
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		z-index: 10;
+	}
+
+	.logo-wrapper {
+		position: absolute;
+		top: 0;
+		padding: 6vh 0;
+	}
+
+	&__title {
+		@include color('main_text');
+		font-size: 50px;
+		font-weight: 700;
+	}
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="216px" height="155px" viewBox="0 0 216 155" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Check</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="-59.0065101%" x2="50%" y2="124.601383%" id="linearGradient-1">
+            <stop stop-color="#9000E4" offset="0%"></stop>
+            <stop stop-color="#5700C4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="↪️-Login-/-Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard_create_rdv_success" transform="translate(-2452.000000, -2085.000000)" fill="url(#linearGradient-1)">
+            <path d="M2652.4935,2087.69033 L2523.99654,2217.89549 L2467.49986,2161.08125 C2463.95644,2157.49413 2458.20099,2157.49413 2454.65757,2161.08125 C2451.11414,2164.66836 2451.11414,2170.4753 2454.65757,2174.05326 L2517.60193,2237.34398 C2521.10947,2240.88534 2526.94566,2240.88534 2530.4532,2237.34398 L2665.33505,2100.66235 C2668.88819,2097.08439 2668.88819,2091.2683 2665.3358,2087.69033 C2661.79237,2084.10322 2656.03693,2084.10322 2652.4935,2087.69033 Z" id="Check"></path>
+        </g>
+    </g>
+</svg>

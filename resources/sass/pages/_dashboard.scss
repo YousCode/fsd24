@@ -1,0 +1,260 @@
+/**
+ *  -----------------------------------------------
+ *  DASHBOARD
+ *  -----------------------------------------------
+ */
+
+
+/*-----------------------------------------------
+ * General
+ -----------------------------------------------*/
+
+.dashboard {
+    &__container {
+        padding-left: 100px;
+        padding-right: 100px;
+        @include m1920 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        @include m1380 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+.s-a{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.s-a::-webkit-scrollbar{
+    display: none;
+}
+
+/*-----------------------------------------------
+ * Welcome block
+ -----------------------------------------------*/
+
+.welcome-card {
+    &__block {
+        overflow: hidden;
+        .block__bck-image {
+            height: calc(100% - 160px);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        @include m1680 {
+            .block__inner {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            p {
+                font-size: 1.4rem;
+                font-weight: 700;
+            }
+        }
+    }
+    &__time {
+        border-radius: 7px;
+        background: rgba(0, 0, 0, 0.5);
+        color: $white !important;
+        font-weight: 700;
+        @include text-size(30);
+        padding: 8px 15px;
+        transform: translateY(-25%);
+        @include m1680 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+
+
+/*-----------------------------------------------
+ * Projects Tasks
+ -----------------------------------------------*/
+
+.dashboard {
+    &__projects-block {
+        // padding: 0 0 100px;
+        position: relative;
+        min-height: 470px;
+        @include media-breakpoint-down(lg) {
+            min-height: 450px;
+        }
+        .block__inner {
+            padding: 0;
+        }
+        &.has-no-content {
+            padding-bottom: 0;
+            overflow: hidden;
+            background-image: url("images/nocontent.png");
+            .card-task-container {
+                cursor: pointer;
+                padding-top: 70px;
+                margin: auto;
+                position: absolute;
+                top: 57%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #1e1438;
+                width: 98%;
+                height: 83%;
+                border-radius: 5px;
+                text-align: center;
+                line-height: 21em;
+            }
+        }
+    }
+    .projects-table__content {
+        -ms-overflow-style: none;
+        /* Internet Explorer 10+ */
+        scrollbar-width: none;
+        /* Firefox */
+        // padding: 16px 22px 0;
+        position: relative;
+        max-height: 446px;
+        //overflow: auto;
+        padding-left: 10px;
+        width: 100%;
+        @include no-scrollbar();
+        @include m1380 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        @include media-breakpoint-down(lg) {
+            max-height: 310px;
+        }
+        &-wrapper {
+            position: relative;
+            height: 100%;
+            margin-left: 10px;
+        }
+        &-b-gradient {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 35px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            // @include transparentGradient();
+            background: linear-gradient(180deg, rgb(255 255 255 / 0%) 0%, rgb(255 255 255 / 60%) 20%, white 100%);
+            pointer-events: none;
+            .theme-dark & {
+                background: linear-gradient(180deg, rgb(37 37 37 / 0%) 0%, rgb(37 37 37 / 75%) 20%, $darkgrey 100%);
+            }
+            @include m1680 {
+                &.is-hidden {
+                    display: block;
+                }
+            }
+            @include media-breakpoint-down(lg) {
+                transform: translateY(-100%);
+            }
+        }
+         ::-webkit-scrollbar {
+            display: none;
+            /* Safari and Chrome */
+        }
+    }
+    .project-card__col {
+        width: 26%;
+        height: 383px;
+        margin-top: 10px;
+        margin-right: 2.5px;
+        margin-left: 2.5px;
+        @include m1680 {
+            width: 30.3333333%;
+        }
+    }
+    &__projects-resume {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        @include m1380 {
+            padding: 30px 20px;
+        }
+        @include media-breakpoint-down(lg) {
+            padding: 10px 20px;
+            .filters-col::before {
+                display: none;
+            }
+        }
+        .filters-col {
+            padding-left: 10px;
+            width: auto;
+            justify-content: flex-start;
+            @include media-breakpoint-up(xl) {
+                margin-left: 15px;
+            }
+            .filter-col {
+                max-width: none;
+            }
+        }
+        .select2-selection__rendered {
+            &::before {
+                content: "Statut :";
+                display: inline-block;
+                margin-right: 5px;
+            }
+        }
+        .select2-container--default .select2-selection--single {
+            border: 0 !important;
+        }
+        .select2-container--default .select2-selection {
+            padding-right: 25px !important;
+            min-width: 270px;
+            @include background-color("dark_bg_2");
+            .select2-selection__rendered {
+                color: $white;
+            }
+            .select2-selection__arrow {
+                right: 0;
+            }
+        }
+        .has-no-content & {
+            @include blur(5px);
+        }
+        .scroll-arrows {
+            position: absolute;
+            right: 25px;
+            bottom: 30px;
+            @include m1681 {
+                &.is-hidden {
+                    display: none;
+                }
+            }
+            .icon {
+                @include color("main_text");
+            }
+        }
+    }
+}
+
+.dashboard-filters {
+    @include background-color("dark_bg_2");
+    &::after {
+        @include transparentGradient($white,
+        180deg,
+        $black2);
+    }
+}
+
+.projects-resume {
+    &__title-box {
+        padding-left: 5px;
+        margin-right: 10px;
+        min-width: 140px;
+        transform: translateY(10%);
+    }
+}

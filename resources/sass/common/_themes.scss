@@ -1,0 +1,83 @@
+/**
+ *  -----------------------------------------------
+ *  THEMES
+ *  -----------------------------------------------
+ */
+
+
+/*-----------------------------------------------
+ * Colors themes
+ -----------------------------------------------*/
+
+$themes: ( "light": ( "main": $white, "main_text": $black, "secondary_text": $black, "light_text": $main-grey, "dark_bg": $grey-lighter, "dark_bg_2": $grey-whiter, "medium_bg": $grey-whiter2, "medium_bg_2": $grey-white, "light-medium_bg": $grey-whiter, "light-medium_bg_2": $grey-whiter, "light_bg": $white, "light_bg_2": $white, "secondary": $violet, "secondary_2": $violet-2, "hover": $purple-white, "hover_2": $purple-white, "border": $grey-d, "border_contrast": $grey-light, "border_contrast2": $grey-light, "table_row": $grey-white, "table_row_2": $grey-lighter, "error": $red-dark, ), "dark": ( "main": $black, "main_text": $white, "main_new": $newviolet, "secondary_text": $main-grey, "light_text": $white, "dark_bg": $black2, "dark_bg_2": $black2, "bg_contextMenu": $violet-5, "medium_bg": $black3, "medium_bg_2": $darkgrey2, "light-medium_bg": $darkgrey2, "light-medium_bg_2": $darkgrey, "light_bg": $darkgrey, "light_bg_2": $darkgrey2, "secondary": $main-grey, "secondary_2": $violet-2, "hover": $black3, "hover_2": $darkgrey, "border": $grey-dark, "border_contrast": $darkgrey, "border_contrast2": $grey-dark, "table_row": $table-row, "table_row_2": $table-row2, "error": $red, "dark_bg3": $black4, "header-top": $purple-turn, ), ) !default;
+
+/*-----------------------------------------------
+ * Themify mixin (on theme's children class)
+ -----------------------------------------------*/
+
+@mixin themify($property, $key, $themes: $themes) {
+    @each $theme,
+    $colors in $themes {
+        .theme-#{$theme} & {
+            #{$property}: map-get($colors, $key);
+        }
+    }
+}
+
+// Color
+@mixin color($param...) {
+    @include themify("color", $param...);
+}
+
+// Background-color
+@mixin background-color($param...) {
+    @include themify("background", $param...);
+}
+
+// Border-color
+@mixin border-color($param...) {
+    @include themify("border-color", $param...);
+}
+
+// Border-color
+@mixin border($side, $size: 1px, $key, $themes: $themes) {
+    @each $theme,
+    $colors in $themes {
+        .theme-#{$theme} & {
+            @if $side==right {
+                border-right: $size solid map-get($colors, $key);
+            }
+            @if $side==left {
+                border-left: $size solid map-get($colors, $key);
+            }
+            @if $side==top {
+                border-top: $size solid map-get($colors, $key);
+            }
+            @if $side==bottom {
+                border-bottom: $size solid map-get($colors, $key);
+            }
+            @if $side==all {
+                border: $size solid map-get($colors, $key);
+            }
+        }
+    }
+}
+
+
+/*-----------------------------------------------
+ * Themify on theme class
+ -----------------------------------------------*/
+
+@mixin this-themify($property, $key, $themes: $themes) {
+    @each $theme,
+    $colors in $themes {
+        &.theme-#{$theme} {
+            #{$property}: map-get($colors, $key);
+        }
+    }
+}
+
+// Background-color
+@mixin this-background-color($param...) {
+    @include this-themify("background-color", $param...);
+}

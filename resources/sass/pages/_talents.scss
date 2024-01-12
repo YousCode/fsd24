@@ -1,0 +1,64 @@
+/**
+ *  -----------------------------------------------
+ *  TALENTS
+ *  -----------------------------------------------
+ */
+
+.talents {
+	&__block {
+		padding: 0;
+		position: relative;
+		margin-top: 50px;
+
+		.alphabetical__list {
+			position: relative;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			margin-bottom: 10px;
+		}
+	}
+
+	&__status {
+		display: block;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		@include gradient(#D8D8D8, #9E9E9E, 180deg);
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(calc(-100% - 20px),-50%);
+
+		&.is-available {
+			@include gradient(#1BB300, #0B7C00, 180deg);
+		}
+
+		&.is-unavailable {
+			@include gradient(#EE0202, #AC0000, 180deg);
+		}
+	}
+
+	&__references {
+    width: 100%;
+    max-width: 110px;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+	}
+
+	&__reference {
+    display: inline-block;
+    margin: 0 8px;
+
+    .icon {
+    	margin: 0;
+    }
+
+    .icon-youtube {
+    	font-size: 18px;
+    	line-height: 0.9;
+    }
+	}
+}

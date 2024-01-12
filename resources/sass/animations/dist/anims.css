@@ -1,0 +1,136 @@
+.bounce-enter-active {
+  animation: bounce-in 0.1s;
+}
+
+.bounce-leave-active {
+  animation: bounce-in 0.1s reverse;
+}
+
+.fadeUpAndDown-enter-active {
+  -webkit-animation: slide 5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: slide 5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.slide-enter-active {
+  transition: all 1s ease-in-out;
+}
+
+.slide-leave-active {
+  transition: all 1s ease-in-out;
+  width: 0;
+}
+
+.scale_up {
+  animation: bounce-in 0.1s;
+}
+
+.scale_down {
+  animation: bounce-in 0.1s reverse;
+}
+
+.slide_cards-enter {
+  opacity: 0 !important;
+  transform: translateX(-20px) !important;
+}
+
+.slide_cards-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.4s ease-in-out;
+}
+
+.slide_cards-leave {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide_cards-leave-active {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+}
+
+.slide_cards-move {
+  transition: all 0.4s ease-in-out;
+}
+
+.switch-enter,
+.switch-leave-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.switch-enter-active,
+.switch-leave {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.switch-enter-active,
+.switch-leave-active {
+  transition: width 0.4s ease-in-out;
+}
+
+/* 
+.switch-side-enter,
+.switch-side-leave-active {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.switch-side-enter-active,
+.switch-side-leave {
+    opacity: 1;
+    transform: translateX(50px);
+}
+
+.switch-side-enter-active,
+.switch-side-leave-active {
+    transition: width 1s ease-in-out;
+} */
+.open-enter {
+  width: 0px;
+  transition: width 1s ease-in-out;
+}
+
+.open-enter-active {
+  width: 180px;
+  transition: width 1s ease-in-out;
+}
+
+.open-leave {
+  width: 180px;
+  transition: width 1s ease-in-out;
+}
+
+.open-leave-active {
+  width: 0px;
+  transition: width 1s ease-in-out;
+}
+
+.open-move {
+  transition: width 1s ease-in-out;
+}
+
+.slide_cards_up-enter {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+.slide_cards_up-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.4s ease-in-out;
+}
+
+.slide_cards_up-leave {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide_cards_up-leave-active {
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}

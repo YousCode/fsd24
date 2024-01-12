@@ -1,0 +1,77 @@
+/**
+ *  -----------------------------------------------
+ *  components/ACTIONS BUTTON
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Col Actions Button (3 dots)
+ -----------------------------------------------*/
+
+.col-actions {
+    &__button {
+        display: block;
+        padding: 10px;
+        margin: 0 auto;
+
+        &:hover .col-actions__button-dot {
+            &,
+            &::before,
+            &::after {
+                background-color: $purple;
+            }
+        }
+    }
+
+    &__button-dot {
+        &,
+        &::before,
+        &::after {
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $white;
+            margin: 5px 0;
+            transition: background-color 0.5s ease;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+        }
+
+        &::before {
+            transform: translateY(-10px);
+        }
+
+        .is-small & {
+            &,
+            &::before,
+            &::after {
+                width: 3px;
+                height: 3px;
+                margin: 3px 0;
+            }
+
+            &::before {
+                transform: translateY(-6px);
+            }
+        }
+
+        .is-white & {
+            &,
+            &::before,
+            &::after {
+                background-color: $white;
+            }
+        }
+    }
+
+    &__context-menu {
+        display: none;
+        position: absolute !important;
+        top: 50% !important;
+        right: 60% !important;
+    }
+}

@@ -1,0 +1,44 @@
+/**
+ *  -----------------------------------------------
+ *  components/SWITCH BUTTON
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Switch Button
+ -----------------------------------------------*/
+.switch-button {
+	background-color: #C9CED6;
+	width: 30px;
+	height: 18px;
+	border-radius: 20px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+  position: relative;
+  top: -1px;
+  transition: background-color 0.3s ease;
+
+	&__btn {
+		display: block;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: $white;
+		box-shadow: 0 3px 3px 0 rgba(10, 31, 68, 0.15);
+		position: absolute;
+		top: 50%;
+		left: 5px;
+		transform: translateY(-50%);
+  	transition: transform 0.3s ease;
+	}
+
+  &.is-active {
+  	background-color: $violet;
+
+  	.switch-button__btn {
+  		transform: translate(100%, -50%);
+  	}
+  }
+}

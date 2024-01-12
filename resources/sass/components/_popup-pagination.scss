@@ -1,0 +1,32 @@
+/**
+ *  -----------------------------------------------
+ *  components/POPUP PAGINATION
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Popup Pagination
+ -----------------------------------------------*/
+
+.popup-pagination {
+	position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+ text-align: center;
+
+	&__item {
+		display: inline-block;
+		margin: 0 3px;
+		border: 1px solid $main-grey;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		transition: background-color 0.3s, border-color 0.3s ease;
+
+		&.is-active {
+			background-color: $purple-2;
+			border-color: $purple-2;
+		}
+	}
+}

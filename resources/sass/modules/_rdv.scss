@@ -1,0 +1,199 @@
+/**
+ *  -----------------------------------------------
+ *  components/RDV
+ *  -----------------------------------------------
+ */
+
+
+/*-----------------------------------------------
+ * RDV
+ -----------------------------------------------*/
+
+.rdv {
+    &__block {
+        position: relative;
+        overflow: hidden;
+        .no-content__block {
+            top: auto;
+            height: 55%;
+            @media (max-width: 1273px) {
+                height: 34vh;
+            }
+        }
+        .block__inner {
+            @include m1380 {
+                padding: 20px;
+            }
+        }
+    }
+    &__wrapper-outer {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            @include transparentGradient();
+            pointer-events: none;
+        }
+    }
+    &__wrapper {
+        max-height: 210px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-left: 1px;
+        padding-right: 1px;
+        @include no-scrollbar();
+    }
+    &__col {
+        margin-bottom: 16px;
+        // &:nth-child(odd) {
+        //     padding-right: 8px;
+        // }
+        // &:nth-child(even) {
+        //     padding-left: 8px;
+        // }
+    }
+    &__card {
+        @include background-color("light-medium_bg");
+        border-radius: 5px;
+        box-shadow: 0 0 1px 0 rgba(10, 31, 68, 0.08), 0px 1.5px 2px 0 rgba(13, 11, 14, 0.4);
+        // padding: 12px;
+        position: relative;
+        margin: 11px;
+        min-height: 140px;
+        height: 10em;
+        p {
+            @include color("main_text");
+            margin-top: 5px;
+        }
+        &.app-is-waiting {
+            margin-top: 3px;
+            // Red Notif
+            &::before {
+                content: "";
+                position: absolute;
+                top: 1px;
+                right: 1px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: $red;
+                transform: translate(50%, -50%);
+            }
+        }
+    }
+    &__card-inner {
+        position: relative;
+        margin-right: 15px;
+        margin-left: 36px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #ae9de2;
+    }
+    &__time {
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 20px;
+        font-weight: 700;
+        @include text-size(22);
+        @include gradient(#9d0000, #e02020, 0deg);
+        margin-right: 5px;
+        margin-bottom: 5px;
+        .time {
+            background-color: $black;
+            display: inline-block;
+            padding: 3px 15px;
+            border-radius: 20px 20px 20px 0;
+        }
+    }
+    &__clock {
+        display: inline-flex;
+        vertical-align: middle;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: white;
+        background: black;
+        /* background: linear-gradient( 
+0deg
+ , #9d0000 0%, #e02020 100%); */
+        margin-right: 5px;
+        margin-bottom: 5px;
+        margin-left: -6px;
+        padding: 3px 7px 3px 7px;
+        .time {
+            background-color: $black;
+            display: inline-block;
+            padding: 3px 15px;
+            border-radius: 20px 20px 20px 0;
+        }
+    }
+    &__time-title {
+        display: inline-block;
+        padding: 3px 7px 3px 7px;
+    }
+    &__room {
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 5px;
+    }
+    &__arrow {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transition: transform 0.3s ease;
+        @include m1380 {
+            font-size: 12px;
+        }
+        .is-active & {
+            transform: rotate(-180deg);
+        }
+    }
+    &__contact {
+        padding-top: 10px;
+        padding-left: 15px;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        &[data-target] {
+            display: none;
+        }
+        a {
+            display: inline-block;
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+        .picto {
+            background-size: 1em;
+            background-position: 1rem;
+            background-repeat: no-repeat;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            width: 100%;
+            height: 3.8rem;
+            line-height: 1rem;
+            padding: 1.5rem 3rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a:hover {
+                color: #190f33;
+            }
+        }
+    }
+    &__maintitle {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        @include m1380 {
+            left: 20px;
+            z-index: 70;
+        }
+    }
+}

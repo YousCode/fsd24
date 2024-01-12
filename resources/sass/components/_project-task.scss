@@ -1,0 +1,23 @@
+/**
+ *  -----------------------------------------------
+ *  components/PROJECT TASK
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Project Task
+ -----------------------------------------------*/
+.project-task {
+	@include gradient(#8E8CD0, #C2C0EA, 0deg);
+	min-height: 30px;
+	padding: 5px 10px;
+	text-align: center;
+	width: 100%;
+	position: relative;
+
+	p {
+		color: $white !important;
+		font-weight: 700;
+		@include text-size(30);
+	}
+}

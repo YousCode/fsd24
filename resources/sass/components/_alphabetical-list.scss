@@ -1,0 +1,49 @@
+/**
+ *  -----------------------------------------------
+ *  components/ALPHABETICAL LIST
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Alphabetical List
+ -----------------------------------------------*/
+.alphabetical {
+    &__list {
+        // background-color: #FCFCFC;
+        @include background-color("light-medium_bg");
+        box-shadow: 0px 2.4px 5px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        display: inline-block;
+        padding: 17px 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 1340px;
+        width: 100%;
+    }
+
+    &__item {
+        display: inline-block;
+        color: $purple;
+        border-radius: 50%;
+        @include text-size(30);
+        font-weight: 700;
+        height: 26px;
+        width: 26px;
+        text-align: center;
+        padding-left: 1px;
+        transition: all 0.3s ease;
+
+        &.is-disabled {
+            color: $white;
+            pointer-events: none;
+        }
+
+        &.is-active,
+        &:hover {
+            @include gradient(#4f00b5, #7d2a86, 180deg);
+            color: $white;
+        }
+    }
+}

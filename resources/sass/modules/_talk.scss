@@ -1,0 +1,284 @@
+/**
+ *  -----------------------------------------------
+ *  TALK
+ *  -----------------------------------------------
+ */
+
+
+/*-----------------------------------------------
+ * 1. Wrappers
+ -----------------------------------------------*/
+
+.plan-wrapper {
+    display: block;
+    padding: 4px 8px;
+    overflow: auto;
+    background: #2b1c56;
+    border-radius: 10px;
+    z-index: 1;
+    height: 550px;
+    &::before {
+        content: "";
+        background-color: #fff;
+        box-shadow: 0px 0px 15px #120b23;
+        background: #2b1c56 !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    @include no-scrollbar();
+}
+
+div.day-plan-container {
+    width: 100%;
+    min-height: 6rem;
+    background-color: #150c2d;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.35em;
+    margin: 0.5rem 0;
+    transition: 0.3s;
+    @include media('<phone') {
+        //width: 90%;
+    }
+    .calendar-drop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background: transparent;
+        &.onDrop {
+            background: rgba(119, 15, 178, 0.3);
+        }
+    }
+    &.goneDay {
+        opacity: 0.3;
+        transition: 0.5s;
+    }
+    &.onDrop {
+        background: rgba(119, 15, 178, 0.2);
+    }
+    &.goneDaySelected {
+        opacity: 0.6;
+        transition: 0.5s;
+    }
+    &.nextDays {
+        box-shadow: inset 10em 90em #201441;
+        .js-toggle-button,
+        .add-btn,
+        .date {
+            opacity: 0.6;
+        }
+    }
+    span.date {
+        font-family: "Proxima Nova";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 15px;
+        color: #ffffff;
+        width: 13em;
+        padding-left: 1em;
+        text-align: left;
+        text-transform: capitalize;
+        @include media('<phone') {
+            font-size: 0.8em;
+            width: 30%;
+        }
+        .today {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 9999px;
+            background-color: red;
+            margin-bottom: 3px;
+        }
+    }
+    .event-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: flex-end;
+        min-height: 2rem;
+        gap: 0.5rem;
+    }
+    .add-btn {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        border-radius: 2px;
+        border: 1px dashed #ae9de2;
+        cursor: pointer;
+        transition: 0.6s;
+        p {
+            color: #ae9de2;
+            padding: 0.2em 0.5em;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        &:hover {
+            border: 1px solid rgba(151, 10, 217, 0.7);
+            transition: 0.6s;
+        }
+    }
+    .add-task-btn {
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        border-radius: 2px;
+        border: 1px dashed #ae9de2;
+        cursor: pointer;
+        transition: 0.6s;
+        p {
+            color: #ae9de2;
+            padding: 0.2em 0.5em;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        &.hover {
+            opacity: 1;
+            transition: 0.3s;
+        }
+    }
+    .add-task-btn:hover {
+        opacity: 1;
+        transition: 0.3s;
+    }
+    .planned-task-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border: 2px solid transparent;
+        border-radius: 3px;
+        padding: 0.1rem 0;
+        width: 100%;
+        height: fit-content;
+        transition: 0.2s;
+        background: #2b1c56;
+        @include media('<phone') {
+            height:40px;
+        }
+        cursor: pointer;
+        &.task-closed {
+            opacity: 0.3;
+        }
+        .task-actions {
+            position: absolute;
+            opacity: 0;
+            background: #39296b;
+            top: 0;
+            height: 100%;
+            width: 40px;
+            right: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2px;
+            color: #7665a7;
+            transition: 0.5s;
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                height:100%;
+                transition: 0.3s;
+                .edit {
+                    border-top-left-radius: 4px;
+                    border-bottom-left-radius: 4px;
+                }
+                .delete {
+                    border-top-right-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                }
+                &:hover {
+                    background-color: #4119b5;
+                    color: white;
+                }
+            }
+        }
+        .task-actions-hover {
+            opacity: 1;
+            right: 0;
+            transition: 0.5s;
+        }
+        span {
+            margin: 0 0.5rem;
+            font-weight: 700;
+            font-size: 12px;
+            @include media('<phone') {
+                font-size: 0.8em;
+            }
+            &:first-child {
+                margin: 0 0 0 1rem;
+            }
+            &.task-mission-explorer {
+                background: linear-gradient(90deg, #eb725d -7.38%, #db57ad 109.84%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                position: absolute;
+                right: 1em;
+                margin: 0;
+            }
+            &.rdv__clock {
+                position: absolute;
+                right: 0.2em;
+                height: 1.5em;
+                border-radius: 3px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0;
+                .picto {
+                    margin: 0 0.6rem 0 0rem;
+                }
+            }
+        }
+        p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 12px;
+            color: #ae9de2;
+            @include media('<phone') {
+                font-size: 0.8em;
+            }
+        }
+        &:hover {
+            transition: 0.2s;
+            border: 2px solid rgba(151, 10, 217, 0.7);
+            border-radius: 3px;
+        }
+    }
+    .related-task-hover {
+        transition: 0.2s;
+        border: 2px solid rgba(151, 10, 217, 0.7);
+        border-radius: 3px;
+        &.goneDaySelected {
+            opacity: 1;
+        }
+    }
+    .task-project {
+        background: #2b1c56;
+    }
+    .deadline-day {
+        background: #82054a;
+        border: 2px solid transparent;
+        &:hover {
+            transition: 0.2s;
+            border: 2px solid #ff83be;
+        }
+    }
+}

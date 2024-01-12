@@ -1,0 +1,56 @@
+/**
+ *  -----------------------------------------------
+ *  common/MIXINS
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Media queries
+ -----------------------------------------------*/
+// Max width 1920
+@mixin m1920 {
+  @media screen and (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+// Min width 1921
+@mixin m1921 {
+  @media screen and (min-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+// Max width 1680
+@mixin m1680 {
+  @media screen and (max-width: 1680px) {
+    @content;
+  }
+}
+// Min width 1681
+@mixin m1681 {
+  @media screen and (min-width: 1681px) {
+    @content;
+  }
+}
+
+// Max width 1380
+@mixin m1380 {
+  @media screen and (max-width: 1380px) {
+    @content;
+  }
+}
+// Min width 1381
+@mixin m1381 {
+  @media screen and (min-width: 1381px) {
+    @content;
+  }
+}
+
+$breakpoints: (
+    'phone': 768px,
+    'tablet': 1024px,
+    'desktop': 1440px
+) !default;
+
+@import '../../node_modules/include-media/dist/include-media';

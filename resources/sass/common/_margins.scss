@@ -1,0 +1,155 @@
+/**
+ *  -----------------------------------------------
+ *  MARGINS
+ *
+ *  1. Margins
+ *  2. Paddings
+ *  3. Sections Paddings
+ *  4. Sections Margin Bottom
+ *  -----------------------------------------------
+ */
+
+
+/*
+ * 1. Margins
+ ****************************************************************/
+.no-margin {
+    margin: 0 !important;
+}
+
+@for $i from 0 through 20 {
+  .mb-#{$i*10} {
+      margin-bottom: 10px*$i;
+  }
+
+  .mt-#{$i*10} {
+      margin-top: 10px*$i;
+  }
+}
+
+.mb-05 {
+  margin-bottom: 5px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.margin-xs-0 {
+  @include media-breakpoint-down(xs) {
+    margin: 0 !important;
+  }
+}
+
+
+/*
+ * 2. Paddings
+ ****************************************************************/
+.no-padding {
+    padding: 0 !important;
+}
+
+@for $i from 0 through 20 {
+    .pb-#{$i*10} {
+        padding-bottom: 10px*$i;
+    }
+
+    .pt-#{$i*10} {
+        padding-top: 10px*$i;
+    }
+}
+
+.padding-xs-0 {
+  @include media-breakpoint-down(xs) {
+    padding: 0 !important;
+  }
+}
+
+/*
+ * 3. Sections Paddings
+ ****************************************************************/
+.section-padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &--small {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &--medium {
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    @include media-breakpoint-down(md) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &--big {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    @include media-breakpoint-down(md) {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+/*
+ * 4. Sections Margin Bottom
+ ****************************************************************/
+.section-mb {
+	&__150 {
+    margin-bottom: 150px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 90px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__90 {
+    margin-bottom: 90px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 60px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__60 {
+    margin-bottom: 60px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 30px;
+    }
+  }
+}

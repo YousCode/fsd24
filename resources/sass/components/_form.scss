@@ -1,0 +1,430 @@
+/**
+ *  -----------------------------------------------
+ *  components/FORM
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Form
+ -----------------------------------------------*/
+
+.form-box {
+    position: relative;
+    .popup-box & {
+        margin-bottom: 20px;
+    }
+    .error-message {
+        position: absolute;
+        bottom: 0;
+        text-align: left;
+        left: 10%;
+        transform: translateY(115%);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        padding-top: 6px;
+        line-height: 8px;
+        width: 100%;
+        margin-top: 0.25rem;
+    }
+    .form-error {
+        display: none;
+    }
+    .field-error .form-error {
+        display: block;
+        transform: translateY(-10px);
+    }
+}
+
+.form-container {
+    padding: 0 1.5em;
+    .form-box {
+        display: flex;
+        align-items: normal;
+        //        justify-content: space-evenly;
+        span.icon,
+        .picto {
+            position: absolute;
+            left: 0em;
+            background-color: #2b1c56;
+            border-radius: 100%;
+            width: 2.5em;
+            height: 2.5em;
+            text-align: center;
+            padding: 1rem;
+            background-size: 2rem;
+            margin: 0;
+            top: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .form-field-wrapper {
+            margin: 0;
+            position: relative;
+            width: 84.5%;
+            display: flex;
+            gap: 1em;
+            margin-left: 3em;
+        }
+        input.form-field,
+        span.selection > .select2-selection--multiple,
+        span.selection > .select2-selection--single,
+        textarea {
+            margin: 0;
+            width: 100%;
+            background: #100824;
+            border: 1px solid #1e143b;
+            border-radius: 5px;
+            display: block;
+            color: #fff;
+            height: auto;
+            &::placeholder,
+            .select2-selection__placeholder {
+                color: #6a5a97 !important;
+            }
+        }
+        textarea {
+            width: 84.5%;
+            height: 5em;
+            position: relative;
+            left: 49px;
+            right: 0;
+            resize: none;
+            padding: 10px 14px;
+        }
+        .hour-field {
+            background: #100824;
+            border: 1px solid #1e143b;
+            border-radius: 5px;
+            color: #fff;
+        }
+    }
+}
+
+.form-inner {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 15px;
+    .popup-pagination {
+        bottom: 0;
+    }
+}
+
+/*-----------------------------------------------
+ * Form Field
+ -----------------------------------------------*/
+
+.form-field {
+    display: block;
+    @include background-color("light_bg");
+    @include border(all, 1px, "light-medium_bg");
+    border-radius: 6px;
+    font-family: inherit;
+    padding: 13px 30px 12px 20px;
+    width: 77%;
+    margin: auto;
+    @include text-size(35);
+    @include color("main_text");
+    position: relative;
+    @include media("<phone") {
+        height: 70px;
+    }
+    @include media-breakpoint-down(sm) {
+        color: $white;
+        border-color: $darkgrey2;
+    }
+    .popup-box & {
+        @include text-size(32);
+        @include placeholder();
+        @include border(all, 1px, "light-medium_bg");
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    input {
+        @include color("main_text");
+        background: transparent;
+        border: 0;
+        font-family: inherit;
+        padding: 0;
+    }
+    &.is-date {
+        padding: 0;
+        input {
+            color: $black;
+            font-family: inherit;
+            padding: 10px;
+        }
+    }
+    .focus\:vc-shadow:focus {
+        box-shadow: none;
+    }
+    &-placeholder {
+        color: $main-grey;
+    }
+    &.field-error {
+        border-color: #ff0000;
+        animation: shake 0.2s;
+        opacity: 0.6;
+    }
+    @keyframes shake {
+        0%,
+        100% {
+            left: 0px;
+        }
+        20%,
+        80% {
+            left: -1px;
+        }
+        40%,
+        60% {
+            left: 1px;
+        }
+    }
+}
+
+.form-field-wrapper {
+    position: relative;
+    width: 77%;
+    margin: 0 auto;
+    .icon {
+        color: $main-grey;
+        font-size: 15px;
+        position: absolute;
+        top: 13px;
+        left: 12px;
+        z-index: 1;
+        pointer-events: none;
+    }
+    .select2-container--default .select2-selection,
+    .form-field {
+        padding-left: 14px;
+    }
+    &.has-value {
+        .icon {
+            @include color("main_text");
+        }
+    }
+}
+
+/*-----------------------------------------------
+ * Form Label
+ -----------------------------------------------*/
+
+.form-label {
+    @include color("main_text");
+    display: block;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 700;
+    margin-bottom: 2px;
+    text-align: left;
+    position: relative;
+    /*    &:not(.no-dot)::before {
+        content: "";
+        @include background-color("main_text");
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        position: absolute;
+        top: 7px;
+        left: -12px;
+        transform: translateX(-100%);
+        color: #7665a7 !important;
+        background: #7665a7 !important;
+    }*/
+    em {
+        color: $purple;
+        font-weight: 700;
+    }
+    &.is-light {
+        font-weight: 400;
+    }
+}
+
+/*-----------------------------------------------
+ * Forgot Password
+ -----------------------------------------------*/
+
+.forgot-pwd-link {
+    @include font-size(35);
+    color: #c2a6ff;
+    // @include color("secondary");
+    @include transition(color);
+    &:hover {
+        color: currentColor;
+        // opacity: 0.6;
+        @include color("light_text");
+        @include media-breakpoint-down(sm) {
+            color: $white;
+        }
+    }
+}
+
+/*-----------------------------------------------
+ * Form Error Message
+ -----------------------------------------------*/
+
+.error-message,
+.error_message {
+    color: $red !important;
+    //@include font-size(29);
+    font-size: 12px !important;
+    padding-left: 20px;
+    padding-top: 2px;
+    opacity: 0.5;
+}
+
+.display {
+    display: block !important;
+}
+
+#input_hour_error {
+    margin-left: 20em;
+}
+
+span.select2-selection.errormessage {
+    border: 1px solid rgba(255, 0, 0, 0.3) !important;
+    display: none;
+}
+
+select#form-talents-select2 {
+    display: none;
+    span.select2-selection.select2-selection--multiple {
+        border: 1px solid rgba(255, 0, 0, 0.3) !important;
+    }
+}
+
+span.form-error {
+    position: absolute;
+    margin: 0 auto;
+    display: none;
+    border: none !important;
+    color: rgba(255, 0, 0, 0.5);
+    width: 35em;
+    transform: translateY(-20px);
+    transition: 0.3s;
+    height: 0;
+}
+
+/*-----------------------------------------------
+ * Form icons
+ -----------------------------------------------*/
+
+.form-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    font-size: 22px;
+    color: #c9ced6;
+    transform: translateY(-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.email-icon {
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/ui/icon-email.svg");
+}
+.see-icon {
+    font-size: 25px;
+    @include transition(color);
+    &:hover,
+    &.is-active {
+        @include color("main_text");
+        cursor: pointer;
+        opacity: 1;
+    }
+}
+
+/*-----------------------------------------------
+ * Hour field
+ -----------------------------------------------*/
+
+.is-hours {
+    .select2-container {
+        width: 50px !important;
+    }
+    .select2-selection__arrow {
+        display: none;
+    }
+    .select2-container--default {
+        .select2-selection--single .select2-selection__rendered {
+            line-height: 32px;
+            padding-right: 0;
+            text-align: center;
+        }
+        .select2-selection {
+            background-color: $grey-white !important;
+            border: 0 !important;
+            border-radius: 5px;
+            height: 50px;
+            .theme-dark & {
+                border: 1px solid $darkgrey2 !important;
+                background-color: transparent !important;
+            }
+        }
+    }
+    .select2-container--default & .select2-results > .select2-results__options {
+        max-height: 140px;
+        padding: 10px 5px;
+    }
+    .select2-results__option {
+        @include color("main_text");
+        text-align: center;
+    }
+}
+
+.hour-field {
+    background-color: $grey-white;
+    border: 0;
+    border-radius: 5px;
+    color: $black;
+    font-family: inherit;
+    padding: 12px;
+    width: 45px;
+    height: 40px;
+    text-align: center;
+    resize: none;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    /* Firefox */
+    &[type="number"] {
+        -moz-appearance: textfield;
+    }
+}
+
+/*-----------------------------------------------
+ * Form Required Text
+ -----------------------------------------------*/
+
+.form-required-mention {
+    @include color("light_text");
+    font-size: 13px;
+    margin-top: 10px;
+    em {
+        color: $purple !important;
+    }
+}
+
+/*-----------------------------------------------
+ * Form Error message
+ -----------------------------------------------*/
+
+.form-error,
+.error-msg {
+    color: $red !important;
+    font-size: 13px;
+    opacity: 50%;
+    padding: 1px 4em 10px;
+}
+
+.error-msg {
+    transform: translateY(-5px);
+}

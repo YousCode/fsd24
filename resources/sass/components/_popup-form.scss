@@ -1,0 +1,66 @@
+/**
+ *  -----------------------------------------------
+ *  components/POPUP FORM
+ *  -----------------------------------------------
+ */
+
+.popup-form {
+	position: relative;
+}
+
+/*-----------------------------------------------
+ * Popup Form Box
+ -----------------------------------------------*/
+.popup {
+	.popup-box .is-large {
+		width: 1450px;
+		max-height: 65vh;
+
+		@media (max-width: 1580px) {
+			width: 1200px;
+		}
+		@include m1380 {
+			width: 1100px;
+		}
+
+		@media (min-height: 1100px) {
+			min-height: 800px;
+		}
+	}
+}
+
+
+/*-----------------------------------------------
+ * Popup Form Item
+ -----------------------------------------------*/
+.popup-form {
+	&__item {
+		@include background-color('medium_bg_2');
+		border-radius: 6px;
+		margin-bottom: 20px;
+		padding: 20px 20px 5px;
+		position: relative;
+
+		.form-box,
+		.select2-container {
+			margin-bottom: 0;
+		}
+
+		&:first-child:last-child .popup-form__item__delete {
+			display: none;
+		}
+
+		&__delete {
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translate(50%,-50%);
+			z-index: 1;
+
+			.icon {
+				transform: none;
+				line-height: 0.9;
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+/**
+ *  -----------------------------------------------
+ *  components/AUTOCOMPLETE
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Autocomplete
+ -----------------------------------------------*/
+
+.ui-autocomplete {
+	padding: 25px 20px 20px;
+	z-index: 99999;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 5px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $white;
+		// @include shadow;
+		box-shadow: 0 0 5px -1.5px rgba(94, 94, 94, 0.5), 0px 0px 15px 15px rgba(151, 151, 151, 0.16);
+		// border-radius: 10px;
+		z-index: -1;
+
+		.theme-dark & {
+			background-color: $darkgrey;
+			border: 1px solid #292929;
+			@include shadow;
+		}
+	}
+
+	.ui-menu-item {
+		color: #ffffff;
+		transition: opacity 0.3s ease;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		&:hover {
+			background-color: #2b1c56;
+		}
+	}
+}

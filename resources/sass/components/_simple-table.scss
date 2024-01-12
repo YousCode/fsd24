@@ -1,0 +1,271 @@
+/**
+ *  -----------------------------------------------
+ *  components/SIMPLE TABLE
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Simple Table
+ -----------------------------------------------*/
+.simple-table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        position: relative;
+        align-items: center;
+    }
+
+    &__header {
+        text-align: center;
+        width: 100%;
+
+        .simple-table__td {
+            justify-content: center;
+            background: #271458;
+
+            p {
+                font-weight: 700;
+                //@include text-size(15);
+            }
+        }
+    }
+
+    &__td {
+        @include background-color("#271458");
+        padding: 5px 15px;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        @include m1380 {
+            padding: 5px 10px;
+
+            &.name {
+                right: 6px;
+                background: transparent !important;
+                top: -1px;
+                @include media('<phone') {
+                    right: auto;
+                }
+            }
+            &.language {
+                right: 72px;
+                justify-content: flex-start;
+                background: transparent !important;
+                align-items: center;
+                justify-content: center;
+                @include media('<phone') {
+                    right: 20px;
+                }
+            }
+            &.format_raw {
+                right: 40px;
+                justify-content: center;
+                padding: 0;
+                @include media('<phone') {
+                    right: auto;
+                }
+            }
+            &.duration {
+                justify-content: center;
+                right: 30px;
+                background: transparent !important;
+                @include media('<phone') {
+                    right: auto;
+                }
+            }
+            &.format_name {
+                right: 40px;
+                background: transparent !important;
+                @include media('<phone') {
+                    right: auto;
+                }
+            }
+        }
+        @include m1381{
+            justify-content: center;
+            &.name {
+                justify-content: flex-start;
+                padding: 0 5px 0 30px;
+            }
+            &.language {
+                right: 55px;
+                background: transparent !important;
+            }
+            &.format_raw {
+                right: 45px;
+            }
+            &.duration {
+                justify-content: center;
+                right: 26px;
+                background: transparent !important;
+            }
+            &.format_name {
+                right: 25px;
+            }
+        }
+
+        &.td-40 {
+            width: 36%;
+        }
+        &.td-20 {
+            width: 20%;
+        }
+        &.td-10 {
+            //width: 12%;
+        }
+
+        &.td-50 {
+            width: 50%;
+        }
+        &.td-25 {
+            width: 25%;
+        }
+
+        &:first-child:last-child {
+            width: 100%;
+            background-color: #271458;
+        }
+
+        &.is-date {
+            justify-content: flex-end;
+            text-transform: capitalize;
+            @include m1380 {
+                padding: 5px;
+            }
+
+            &.is-active {
+                &::before {
+                    content: "";
+                    border-radius: 50%;
+                    width: 10px;
+                    height: 10px;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 20px;
+                    transform: translateY(-50%);
+                    @include gradient(#5a29a2, #9353cf, 0deg);
+                }
+            }
+        }
+
+        p,
+        label {
+            @include color("main_text");
+            @include text-size(30);
+            text-align: center;
+            @include m1380 {
+                font-size: 13px;
+            }
+        }
+
+        .simple-table &.name {
+            justify-content: flex-start;
+            padding: 0 5px 0 30px;
+
+            p,
+            label {
+                text-align: left;
+            }
+            span:hover::after {
+                content: attr(title);
+                color: #7665a7;
+                text-align: center;
+                border-radius: 6px 6px 6px 0px;
+                padding: 5px;
+                position: absolute;
+                z-index: 1;
+                top: -0.5rem;
+                left: 100%;
+                background: #1e1438;
+                box-shadow: -3px 3px 20px rgba(0, 0, 0, 0.2);
+                transition: transform 0.1s ease-in-out;
+                font-size: 12px;
+                width: max-content;
+              }
+              
+        }
+
+        .col-actions__button {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__body {
+        min-height: 250px;
+        overflow: auto;
+        @include no-scrollbar();
+
+        .simple-table__row {
+            &:nth-child(odd) {
+                .simple-table__td {
+                    @include background-color("table_row_2");
+                }
+            }
+
+            &:nth-child(even) {
+                .simple-table__td.is-date {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .wrapper-checkbox {
+        position: absolute;
+        // top: 4px;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    label {
+        cursor: pointer;
+    }
+}
+
+/*-----------------------------------------------
+ * Simple Table - Dark background
+ -----------------------------------------------*/
+.simple-table.dark-bckg {
+    //background-color: rgba($black, 0.1);
+
+    .simple-table {
+        &__header {
+            //border-bottom: 1px solid rgba($black, 0.1);
+        }
+
+        &__td {
+            background-color: transparent;
+        }
+
+        &__body {
+            .simple-table__row {
+                &:nth-child(odd) {
+                    .simple-table__td {
+                        //background-color: rgba($black, 0.1);
+                    }
+                }
+
+                &:nth-child(even) {
+                    .simple-table__td.is-date {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+}

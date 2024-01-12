@@ -1,0 +1,105 @@
+/**
+ *  -----------------------------------------------
+ *  modules/ACCOUNT MENU
+ *  -----------------------------------------------
+ */
+
+.account {
+    &__header {
+        //position: absolute;
+        //top: 40px;
+        //right: 90px;
+        @include media-breakpoint-down(lg) {
+            right: 40px;
+        }
+    }
+}
+.h-c_b{
+    background: #2B1C56;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    width: 110px;
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 0;
+    /*padding-left: 10px;*/
+    align-items: center;
+    /*.shortcut-create {
+        position: absolute;
+        padding: 6px 8px 6px 8px;
+        background: #1E1438;
+        display: flex;
+        align-items: center;
+        color: #8678B4;
+        border: 1px solid #2A1B50;
+        justify-content: center;
+        font-weight: 700;
+        border-radius: 3px;
+        right: 5px;
+    }*/
+}
+/*-----------------------------------------------
+ * Account menu
+ -----------------------------------------------*/
+.account-menu {
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__info {
+        margin-left: 10px;
+    }
+
+    &__panel {
+        position: absolute;
+        top: calc(100% + 5px);
+        max-width: 220px;
+        min-width: 200px;
+        width: 100%;
+        z-index: 9999;
+        right: 3rem;
+        @include shadow();
+        border-radius: 6px;
+        @include background-color("light_bg");
+        padding: 20px 0;
+
+        &.js-toggle-content {
+            display: none;
+        }
+
+        #workspaces_content {
+            display: none;
+            border-top: 1px solid $black3;
+            border-bottom: 1px solid $black3;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        color: $white;
+        @include text-size(32);
+        padding: 8px 20px;
+        width: 100%;
+        transition: color 0.3s, background-color 0.3s ease;
+        text-align: center;
+
+        &.active {
+            background-color: $black3;
+        }
+
+        &:hover {
+            background-color: #f2f4f7;
+            color: $black;
+            @include color("main_text");
+
+            .theme-dark & {
+                background-color: $black3;
+            }
+        }
+    }
+}

@@ -1,0 +1,190 @@
+/**
+ *  -----------------------------------------------
+ *  components/Calendar
+ *  -----------------------------------------------
+ */
+
+
+/*-----------------------------------------------
+ * Calendar
+ -----------------------------------------------*/
+
+// General
+.vc-popover-content {
+	border: 1px solid $grey-separator !important;
+	@include sm-shadow();
+
+	&-wrapper {
+		&[x-placement="bottom-end"] {
+			left: 10px !important;
+		}
+
+		[popover-align="right"] & {
+			left: auto !important;
+			right: 40px;
+		}
+
+		.form-field-wrapper & {
+			left: 0 !important;
+		}
+
+		.filter-item & {
+			width: 100%;
+			max-width: none;
+			// top: -5px !important;
+			left: 0 !important;
+		}
+
+		.w-100 & {
+			width: 100%;
+		}
+	}
+
+	.vc-container {
+		font-family: $proxima;
+		min-width: 100%;
+		&.vc-kpurple {
+			background-color: #190f33;
+		}
+	}
+
+    .vc-pane {
+        position: relative;
+        &::after {
+            content: '';
+            width: 100%;
+            height: 33px;
+            top: 34px;
+            position: absolute;
+            border-bottom: 1px solid $grey-separator;
+            left: 0;
+
+
+        }
+        &:last-of-type::after{
+            border-left: 1px solid $grey-separator;
+        }
+    }
+
+	.vc-header {
+		padding-bottom: 5px;
+        border: 1px solid $grey-separator;
+        position: relative;
+        &:first-child {
+            border-right: none;
+        }
+	}
+
+	.vc-title {
+		@include text-size(32);
+		//@include color('main_text');
+        color: $mauve;
+        padding-bottom: 5px;
+	}
+
+	.vc-grid-cell {
+		margin-bottom: 5px;
+	}
+
+    .vc-weeks {
+        padding-top:0 !important;
+    }
+
+	.vc-weekday {
+		color: $mauve;
+		@include text-size(28);
+		font-weight: 400;
+		margin-bottom: 5px;
+        padding-top: 0;
+	}
+
+	.vc-day-content:hover {
+		@include background-color('hover_2');
+	}
+
+	// Arrow
+	.vc-popover-caret {
+		border-top: 1px solid #f2f2f3 !important;
+	  border-left: 1px solid #f2f2f3 !important;
+
+	  .theme-dark & {
+	  	border-top: 1px solid $black3 !important;
+	  	border-left: 1px solid $black3 !important;
+	  }
+	}
+}
+
+// Colors
+.vc-bg-kpurple-200 {
+    background-color: #f4f4f4;
+    .theme-dark & {
+        background-color: $darkgrey;
+    }
+	background-color: #F4F4F4;
+
+	.theme-dark & {
+		background-color: $darkgrey;
+	}
+}
+
+.vc-bg-kpurple-600 {
+    background-color: $purple-1;
+	background-color: $purple-smooth;
+}
+
+.vc-border-kpurple-700.vc-rounded-full {
+    border-color: transparent;
+    @include background-color("hover_2");
+}
+
+.vc-border-gray-400 {
+    border-color: #1e143b !important;
+	border-color: transparent;
+	//@include background-color('hover_2');
+    background-color: $purple-smooth-dark;
+}
+.vc-rounded-full {
+    border-radius: 2px !important;
+}
+.theme-dark {
+	.vc-bg-white {
+		background-color: $violet-dark;
+	}
+	input.vc-bg-white {
+		background-color: transparent;
+	}
+	.vc-text-gray-900 {
+		color: $mauve !important;
+	}
+	.vc-text-gray-600 {
+		color: $mauve;
+	}
+	.hover\:vc-bg-gray-300:hover {
+		background-color: $darkgrey2 !important;
+	}
+
+    .vc-text-white {
+        color: $mauve;
+    }
+
+    .vc-text-base {
+        font-size: 14px;
+    }
+}
+
+// Current day
+.is-today .vc-day-content {
+    position: relative;
+    &::after {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #ff0000;
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translate(-50%, 100%);
+    }
+}

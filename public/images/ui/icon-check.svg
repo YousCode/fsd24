@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="23px" viewBox="0 0 32 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>tick (1)</title>
+    <desc>Created with Sketch.</desc>
+    <g id="***********Symbols***********" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="click/droit/tâche-en-attente" transform="translate(-23.000000, -36.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="accepter-la-tâche">
+                <g transform="translate(23.000000, 29.000000)">
+                    <g id="tick-(1)" transform="translate(0.000000, 7.000000)">
+                        <path d="M31.6053033,0.399210867 C31.0803516,-0.133070289 30.2276928,-0.133070289 29.7027411,0.399210867 L10.6661545,19.7199758 L2.29627601,11.2894751 C1.77132432,10.757194 0.918665454,10.757194 0.393713766,11.2894751 C-0.131237922,11.8217563 -0.131237922,12.6834316 0.393713766,13.2143549 L9.71880493,22.6058811 C10.2384406,23.131373 11.1030604,23.131373 11.6226962,22.6058811 L31.6051926,2.3240907 C32.131584,1.79316741 32.131584,0.930134162 31.6053033,0.399210867 C31.0803516,-0.133070289 32.131584,0.930134162 31.6053033,0.399210867 Z" id="Check"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,61 @@
+/**
+ *  -----------------------------------------------
+ *  components/CUSTOM COL
+ *  -----------------------------------------------
+ */
+
+
+/*-----------------------------------------------
+ * Custom col
+ -----------------------------------------------*/
+
+.col-custom {
+    padding-left: 15px;
+    padding-right: 15px;
+    &:first-child {
+        //padding-right: 30px;
+    }
+    &:last-child {
+        //padding-left: 30px;
+    }
+    @include m1920 {
+        &:first-child {
+            padding-right: 13px;
+        }
+        &:last-child {
+            padding-left: 13px;
+        }
+    }
+    @include media-breakpoint-down(lg) {
+        &:first-child {
+            padding-right: 10px;
+        }
+        &:last-child {
+            padding-left: 10px;
+        }
+    }
+}
+
+.col-w30 {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.col-w70 {
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+
+
+/*-----------------------------------------------
+ * Custom col small - reduce gutters
+ -----------------------------------------------*/
+
+.col-custom-small {
+    &:first-child {
+        padding-right: 8px;
+    }
+    &:last-child {
+        padding-left: 8px;
+    }
+}

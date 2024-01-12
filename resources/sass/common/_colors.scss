@@ -1,0 +1,196 @@
+/**
+ *  -----------------------------------------------
+ *  COLORS
+ *  -----------------------------------------------
+ */
+
+
+/*-----------------------------------------------
+ * Colors
+ -----------------------------------------------*/
+
+body {
+    .c {
+        &-black {
+            color: $black !important;
+        }
+        &-white {
+            color: $white !important;
+        }
+        //	&-grey { color: $grey !important; }
+        &-main-grey {
+            color: $main-grey !important;
+        }
+        &-grey-b {
+            color: $grey-b !important;
+        }
+    }
+    .Direction-artistique, .artistic-direction {
+        color: #37ff46 !important;
+        &.task-type {
+            background: rgba(55, 255, 70, 0.15);
+        }
+        &.dot-button-task {
+            background-color: #37ff46;
+        }
+    }
+    .Montage, .editing {
+        color: #01cfbf !important;
+        &.task-type {
+            background: rgba(1, 207, 191, 0.15);
+        }
+        &.dot-button-task {
+            background-color: #01cfbf;
+        }
+    }
+    .Sound-design, .sound-design {
+        color: #ff4286 !important;
+        &.task-type {
+            background: rgba(255, 66, 134, 0.15);
+        }
+        &.dot-button-task {
+            background-color: #ff4286;
+        }
+    }
+    .Motion, .motion {
+        color: #7b9cff !important;
+        &.task-type {
+            background: rgba(123, 156, 255, 0.15);
+        }
+        &.dot-button-task {
+            background-color: #7b9cff;
+        }
+    }
+    .Ecriture, .writing {
+        color: #ffd337 !important;
+        &.task-type {
+            background: rgba(255, 211, 55, 0.15);
+        }
+        &.dot-button-task {
+            background-color: #ffd337;
+        }
+    }
+    .VFX, .vfx {
+        color: #FF6737 !important;
+        &.task-type {
+            background: rgba(255, 103, 55, 0.15);
+        }
+        &.dot-button-task {
+            background-color: #FF6737;
+        }
+    }
+    .Confo-post-etalo, .post-grading-confo {
+        color: #7e7bff !important;
+        &.task-type {
+            background: rgba(126, 123, 255, 0.15);
+        }
+        &.dot-button-task {
+            background-color: #7e7bff;
+        }
+    }
+    .Confo-pré-etalo, .pre-grading-confo {
+        color: #be6cff !important;
+        &.task-type {
+            background: rgba(190, 108, 255, 0.15);
+        }
+        &.dot-button-task {
+            background-color: #be6cff;
+        }
+    }
+    .Etalonnage, .color-grading {
+        color: #ff37eb !important;
+        &.task-type {
+            background: rgba(255, 55, 235, 0.15);
+        }
+        &.dot-button-task {
+            background-color: #ff37eb;
+        }
+    }
+    .Assistanat, .assistantship {
+        color: #37ff9f !important;
+        &.task-type {
+            background: rgba(55, 255, 159, 0.15);
+        }
+        &.dot-button-task {
+            background-color: #37ff9f;
+        }
+    }
+    .Graphisme, .graphism {
+        color: #37ffdb !important;
+        &.task-type {
+            background: rgba(55, 255, 219, 0.15);
+        }
+        &.dot-button-task {
+            background-color: #37ffdb;
+        }
+    }
+    .d3 {
+        color: #ff4b4b !important;
+        &.task-type {
+            background: rgba(255, 75, 75, 0.15);
+        }
+        &.dot-button-task {
+            background-color: #ff4b4b;
+        }
+    }
+    .mission-explorer {
+        background: linear-gradient(90deg, #eb725d -7.38%, #db57ad 109.84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    .mission-explorer-dot {
+        background: linear-gradient(90deg, #eb725d -7.38%, #db57ad 109.84%);
+    }
+    .Prepa-projet, .project-preparation {
+        color: #ff4b4b !important;
+        &.task-type {
+            background: rgba(255, 96, 182, 0.15);
+        }
+        &.dot-button-task {
+            background-color: #ff4b4b;
+        }
+    }
+    .Gestion, .management {
+        color: #ffc672 !important;
+        &.task-type {
+            background: rgba(255, 198, 114, 0.15);
+        }
+        &.dot-button-task {
+            background-color: #ffc672;
+        }
+    }
+    .RDV {
+        color: #ff4079 !important;
+        &.dot-button-task {
+            background-color: #ff4079;
+        }
+    }
+    .Recherche, .search {
+        color: #377bff !important;
+        &.task-type {
+            background: rgba(55, 123, 255, 0.15);
+        }
+        &.dot-button-task {
+            background-color: #377bff;
+        }
+    }
+}
+
+
+/*-----------------------------------------------
+ * Background Colors
+ -----------------------------------------------*/
+
+.bg {
+    &-black {
+        background-color: $black !important;
+    }
+    &-white {
+        background-color: $white !important;
+    }
+    &-grey-white {
+        background-color: $grey-white !important;
+    }
+}

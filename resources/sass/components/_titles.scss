@@ -1,0 +1,49 @@
+/**
+ *  -----------------------------------------------
+ *  TITLES
+ *  -----------------------------------------------
+ */
+
+
+/*-----------------------------------------------
+ * Big Title
+ -----------------------------------------------*/
+
+.big-title {
+    @include color("main_text");
+    @include font-size(105);
+    font-weight: 700;
+    line-height: 1em;
+}
+
+
+/*-----------------------------------------------
+ * Medium Title
+ -----------------------------------------------*/
+
+.medium-title {
+    @include color("main_text");
+    @include text-size(60);
+}
+
+
+/*-----------------------------------------------
+ * Main Title
+ -----------------------------------------------*/
+
+.main-title {
+    @include color("main_text");
+    @include text-size(60);
+    font-weight: 700;
+    .icon {
+        @include text-size(45);
+        transform: translateY(-12%);
+    }
+    @include media-breakpoint-down(lg) {
+        font-size: 2.2rem;
+    }
+    @include media('<phone') {
+        z-index: 4;
+        position: relative;
+    }
+}

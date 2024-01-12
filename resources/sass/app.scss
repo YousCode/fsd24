@@ -1,0 +1,102 @@
+// Variables
+@import "common/variables";
+@import "common/fonts";
+// Bootstrap
+@import "~bootstrap/scss/mixins/grid";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/utilities";
+// Common
+@import "common/themes";
+@import "common/reset";
+@import "common/mixins";
+@import "common/media-queries";
+@import "common/global";
+// Components
+@import "components/titles";
+@import "components/texts";
+@import "components/picto";
+@import "components/buttons";
+@import "components/switch-button";
+@import "components/actions-button";
+@import "components/actions-box";
+@import "components/menu";
+@import "components/cookies";
+@import "components/filters";
+@import "components/form";
+@import "components/checkbox-radio";
+@import "components/select";
+@import "components/table";
+@import "components/popup";
+@import "components/popup-form";
+@import "components/popup-pagination";
+@import "components/autocomplete";
+@import "components/calendar";
+@import "components/simple-table";
+@import "components/task-colors";
+@import "components/alphabetical-list";
+@import "components/project-task";
+@import "components/custom-col";
+// Layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/menu";
+@import "layout/context-menu";
+
+// Explorer Module
+@import 'modules/explorer/profile/explorer_profile_project_detail';
+@import 'modules/explorer/profile/explorer_profile_projects_list';
+@import 'modules/explorer/profile/explorer_profile_form';
+@import 'modules/explorer/profile/explorer_profile_portfolio_add_modal';
+//@import 'resources/sass/modules/explorer/explorer_confirm_quit_modal';
+
+// Explorer Pages
+@import "pages/home";
+@import "pages/mention";
+@import "pages/explorer";
+@import 'pages/explorer-profile';
+@import 'pages/explorer-membership';
+@import 'pages/explorer-home';
+@import 'pages/explorer-messenger';
+@import "pages/contact";
+
+// Modules
+@import "modules/project-card";
+@import "modules/no-content";
+@import "modules/task";
+@import "modules/task-form";
+@import "modules/task-popin";
+@import "modules/rdv";
+@import "modules/notes";
+@import "modules/congrats";
+@import "modules/notifications";
+@import "modules/account-menu";
+@import "modules/welcome-screen";
+@import "modules/talk";
+@import "modules/contactModule.scss";
+// Pages
+@import "pages/login";
+// @import 'pages/home';
+@import 'pages/dashboard';
+@import 'pages/planning';
+@import 'pages/projects';
+@import 'pages/project-detail';
+@import 'pages/talents';
+@import 'pages/contact';
+
+// Explorer Pages
+@import "pages/explorer";
+@import 'pages/explorer-profile';
+@import 'pages/explorer-membership';
+@import 'pages/explorer-home';
+@import 'pages/explorer-messenger';
+
+// Common
+@import "common/margins";
+@import "common/colors";
+// Animations
+@import "animations/keyframes.scss";
+@import "animations/anims.scss";

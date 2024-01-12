@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 37 28" style="enable-background:new 0 0 37 28;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#888888;}
+</style>
+<g>
+	<g transform="translate(-1435.000000, -46.000000)">
+		<g>
+			<g id="SEARCH-BAR-PROJET">
+				<g id="FILTRES" transform="translate(1190.000000, 25.000000)">
+					<g id="DROP-DOWN-CATEGORIE" transform="translate(220.000000, 0.000000)">
+						<g id="list" transform="translate(25.000000, 21.000000)">
+							<path id="Path" class="st0" d="M34.8,27.3H10.3c-1,0-1.8-0.8-1.8-1.8c0-1,0.8-1.8,1.8-1.8h24.5c1,0,1.8,0.8,1.8,1.8
+								C36.6,26.5,35.8,27.3,34.8,27.3z"/>
+							<path class="st0" d="M34.8,15.9H10.3c-1,0-1.8-0.8-1.8-1.8s0.8-1.8,1.8-1.8h24.5c1,0,1.8,0.8,1.8,1.8
+								C36.6,15,35.8,15.9,34.8,15.9z"/>
+							<path class="st0" d="M34.8,4.4H10.3c-1,0-1.8-0.8-1.8-1.8s0.8-1.8,1.8-1.8h24.5c1,0,1.8,0.8,1.8,1.8S35.8,4.4,34.8,4.4z"/>
+							<circle id="Oval" class="st0" cx="2.5" cy="2.7" r="2.5"/>
+							<circle class="st0" cx="2.5" cy="14" r="2.5"/>
+							<circle class="st0" cx="2.5" cy="25.4" r="2.5"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="28px" viewBox="0 0 37 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>list</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="-35.3618862%" x2="21.1707826%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#4F00B5" offset="0%"></stop>
+            <stop stop-color="#7D2A86" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="***********Symbols***********" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="search/bar/projet/content/deadline/disable" transform="translate(-1435.000000, -46.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="search/bar/projet/content/disable">
+                <g id="SEARCH-BAR-PROJET">
+                    <g id="FILTRES" transform="translate(1190.000000, 25.000000)">
+                        <g id="DROP-DOWN-CATEGORIE" transform="translate(220.000000, 0.000000)">
+                            <g id="list" transform="translate(25.000000, 21.000000)">
+                                <path d="M34.7711304,27.3261739 L10.2991304,27.3261739 C9.29052174,27.3261739 8.47304348,26.5086957 8.47304348,25.500087 C8.47304348,24.4914783 9.29052174,23.674 10.2991304,23.674 L34.7705217,23.674 C35.7791304,23.674 36.5966087,24.4914783 36.5966087,25.500087 C36.5966087,26.5086957 35.7797391,27.3261739 34.7711304,27.3261739 Z" id="Path"></path>
+                                <path d="M34.7711304,15.8638261 L10.2991304,15.8638261 C9.29052174,15.8638261 8.47304348,15.0463478 8.47304348,14.0377391 C8.47304348,13.0291304 9.29052174,12.2116522 10.2991304,12.2116522 L34.7705217,12.2116522 C35.7791304,12.2116522 36.5966087,13.0291304 36.5966087,14.0377391 C36.5972174,15.0463478 35.7797391,15.8638261 34.7711304,15.8638261 Z" id="Path"></path>
+                                <path d="M34.7711304,4.40147826 L10.2991304,4.40147826 C9.29052174,4.40147826 8.47304348,3.584 8.47304348,2.5753913 C8.47304348,1.56678261 9.29052174,0.749304348 10.2991304,0.749304348 L34.7705217,0.749304348 C35.7791304,0.749304348 36.5966087,1.56678261 36.5966087,2.5753913 C36.5966087,3.584 35.7797391,4.40147826 34.7711304,4.40147826 Z" id="Path"></path>
+                                <circle id="Oval" cx="2.45243478" cy="2.7166087" r="2.45243478"></circle>
+                                <circle id="Oval" cx="2.45243478" cy="14.0377391" r="2.45243478"></circle>
+                                <circle id="Oval" cx="2.45243478" cy="25.3588696" r="2.45243478"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

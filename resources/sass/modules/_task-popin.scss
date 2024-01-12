@@ -1,0 +1,108 @@
+/**
+ *  -----------------------------------------------
+ *  components/TASK POPIN
+ *  -----------------------------------------------
+ */
+
+/*-----------------------------------------------
+ * Task
+ -----------------------------------------------*/
+.task-popin {
+	position: absolute;
+	top: auto;
+	bottom: auto;
+	left: auto;
+	right: auto;
+	z-index: 2;
+
+	.popup-overlay {
+		display: none;
+	}
+
+	.popup-content {
+		position: relative;
+		transform: none;
+		top: auto;
+		left: auto;
+	}
+
+	.popup-box {
+		@include background-color('light_bg_2');
+		width: 310px;
+		padding: 0;
+		overflow: inherit;
+		box-shadow: 0 1px 4px 0px rgba(26, 26, 26, 0.2);
+		max-height: none;
+
+		// Arrow
+		&::before {
+			content: '';
+			position: absolute;
+			top: 25px;
+	    left: 0;
+	    width: 6px;
+	    height: 6px;
+	    transform: translate(-50%, -50%) rotate(-45deg);
+			background-color: $white;
+			@include background-color('light_bg_2');
+			@include border(top, 1px, 'light_bg_2');
+			@include border(left, 1px, 'light_bg_2');
+			z-index: 1;
+		}
+	}
+
+	.form-box {
+		margin-bottom: 0;
+		padding: 20px 22px;
+
+		&:not(:last-child) {
+			// border-bottom: 1px solid $grey-d;
+			@include border(bottom, 1px, 'border');
+		}
+	}
+
+}
+
+.form__task_single {
+	.icon-button {
+		position: absolute;
+		top: 15px;
+		right: 10px;
+		z-index: 2;
+	}
+
+	.popup-box .select2-container {
+		margin-bottom: 0;
+	}
+
+	.popup-box .form-field,
+	.select2-container--default .select2-selection--single {
+		border: 0;
+
+		.theme-dark.popup-is-open & {
+			border: 1px solid $grey-dark;
+		}
+	}
+
+	.form-field,
+	.select2-container--default .select2-selection {
+		background-color: $grey-white;
+
+		.theme-dark & {
+			background-color: $darkgrey;
+		}
+	}
+
+	.filter-item .select2-container--default .select2-selection--single .select2-selection__arrow {
+		right: 0;
+	}
+
+	.theme-dark:not(.popup-is-open) & input.vc-bg-white {
+		background-color: $darkgrey;
+	}
+
+	.theme-dark.popup-is-open & input.vc-bg-white {
+		border: 1px solid $grey-dark;
+    border-radius: 6px;
+	}
+}
